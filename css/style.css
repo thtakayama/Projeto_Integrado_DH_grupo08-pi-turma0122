@@ -103,17 +103,27 @@ ul.pagamentos li {
 }
 
 ul.redes-sociais li {
-    padding: .5em;
+    background-color: #EFDAD7;
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    margin: 0px .5em;
+}
+
+ul.redes-sociais li:hover {
+    background: #1572A1;
 }
 
 ul.redes-sociais li a i {
     color: #1572A1;
-    font-size: 3rem;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate3d(-50%, -50%, 0px);
+    transition: .3s;
 }
 
 ul.redes-sociais li:hover a i {
     color: white;
-    font-size: 3rem;
 }
 
 .produto {
@@ -217,7 +227,7 @@ h2.preco {
 }
 
 .produto-comprar button a {
-    color: white;
+    color: white!important;
     font-weight: bold;
 }
 
@@ -226,7 +236,7 @@ h2.preco {
 }
 
 .produto-comprar button:hover a {
-    color: #1572A1;
+    color: #1572A1!important;
 }
 
 .tab {
@@ -305,10 +315,10 @@ h2.preco {
 }
 
 .livros-item button a {
-    color: white;
+    color: white!important;
     font-weight: 700;
 }
 
 .livros-item button:hover a {
-    color: #1572A1;
+    color: #1572A1!important;
 }
