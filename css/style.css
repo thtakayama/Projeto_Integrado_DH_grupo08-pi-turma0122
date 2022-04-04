@@ -182,6 +182,14 @@ ul.navbar li a {
 ul.navbar li a:hover {
   background-color: #1572a1;
 }
+.vitrine{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap:wrap;
+  align-items: stretch;
+}
+.livros-item{ width: 150px;
+}
 footer {
   background-color: #f1f1f1;
   padding: 2rem 0px;
