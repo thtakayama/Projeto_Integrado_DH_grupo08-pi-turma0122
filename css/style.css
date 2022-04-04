@@ -68,8 +68,9 @@ header {
 }
 .header-1 {
   display: grid;
-  grid-template-columns: 0.5fr 1.5fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 1rem;
+  align-items: center;
   background: #1572a1;
   padding: 1vh;
   padding-right: 15px;
@@ -79,14 +80,22 @@ header {
   margin: 0px auto;
 }
 .logo {
-  height: 8vh;
+  max-height: 6vh;
   width: 14vh;
 }
+
+.logo img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
 .pesquisa {
   padding: 1.5vh;
 }
 form {
   height: 100%;
+  display: flex;
 }
 .pesquisa input {
   border: 0;
@@ -105,6 +114,7 @@ button.botao-pesquisa {
   width: 5vh;
   box-shadow: none;
   outline: none;
+  margin-left: 1vh;
 }
 ul.menus-header {
   display: flex;
@@ -112,11 +122,13 @@ ul.menus-header {
   width: 100%;
   height: 100%;
   justify-content: center;
+  margin-bottom: 0px;
 }
 ul.menus-header li {
   background-color: #efdad7;
   border-radius: 40px;
-  width: 59px;
+  width: 60px;
+  height: 60px;
   color: #1572a1;
   text-align: center;
   padding-top: 17px;
@@ -262,6 +274,7 @@ ul.redes-sociais li:hover a i {
 
 .produto {
   display: flex;
+  margin-top: 2em;
 }
 
 .produto-galeria {
