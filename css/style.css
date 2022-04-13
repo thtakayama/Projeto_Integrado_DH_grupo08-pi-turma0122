@@ -202,6 +202,26 @@ ul.navbar li a:hover {
 }
 .livros-item{ width: 150px;
 }
+
+/* mesagem de finalização de compra */
+
+#confirmacao{
+  background-color: rgb(239, 218, 215);
+  width: 60vw;
+  height: 50vh;
+  margin: 100px auto;
+}
+
+#confirmacao h1{
+  font-size: 50px;
+  display: flex;
+  padding: 140px 140px 140px 140px;
+  text-align: center;
+}
+
+/* fim da finalização de compra */
+
+
 footer {
   background-color: #f1f1f1;
   padding: 2rem 0px;
