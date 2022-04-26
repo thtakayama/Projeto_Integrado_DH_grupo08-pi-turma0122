@@ -59,6 +59,28 @@ button {
   cursor: pointer;
 }
 
+button.btn {
+  background-color: #1572a1;
+  border: 3px solid #1572a1;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+button.btn:hover {
+  background-color: white;
+}
+
+button.btn a {
+  color: white !important;
+  font-weight: 700;
+}
+
+button.btn:hover a {
+  color: #1572a1 !important;
+}
+
 .container {
   max-width: 980px;
   margin: 0px auto;
@@ -188,11 +210,15 @@ ul.navbar {
 }
 ul.navbar li a {
   padding: 14px 16px;
-  color: black;
+  color: #04161f;
+  font-weight: bold;
   text-decoration: none;
+  transition: .3s;
 }
 ul.navbar li a:hover {
+  color: white;
   background-color: #1572a1;
+  border-radius: 5px;
 }
 .vitrine{
   display: flex;
@@ -489,4 +515,97 @@ h2.preco {
 
 .livros-item button:hover a {
   color: #1572a1 !important;
+}
+
+/* PAINEL USUÁRIO */
+
+.grid-painel {
+  padding: 2em 0px;
+  display: flex;
+  width: 100%;
+}
+
+.painel-menu {
+  flex: 1;
+}
+
+.usuario-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.usuario-img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background: #efdad7;
+}
+
+.usuario-info h6 {
+  font-weight: bold;
+}
+
+.usuario-info p:last-child {
+  margin-bottom: 0px;
+}
+
+.painel-menu nav ul {
+  list-style: none;
+}
+
+.painel-menu nav ul li {
+  padding: .5em .8em;
+  border-bottom: 2px solid #efdad7;
+  transition: 0.3s;
+}
+
+.painel-menu nav ul li a {
+  color: #1572a1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.painel-menu nav ul li.active, .painel-menu nav ul li:hover {
+  background: #efdad7;
+  border-radius: 5px;
+}
+
+.painel-menu nav ul li.active a, .painel-menu nav ul li:hover a {
+  color: #04161f;
+  font-weight: bold;
+}
+
+.painel-conteudo {
+  margin-left: 2em;
+  flex: 3;
+}
+
+.painel-conteudo div > div > h4 {
+  font-weight: bold;
+}
+
+.usuario-pessoal h2 {
+  color: #1572a1;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.info-pessoal {
+  width: 100%;
+  background: #f1f1f1;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.info-pessoal > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.usuario-pessoal button.btn {
+  max-width: 100px;
+  align-self: flex-end;
 }
