@@ -583,12 +583,12 @@ h2.preco {
   flex: 3;
 }
 
-#dados-configuracoes {
-  margin-top: 2em;
-}
-
 .painel-conteudo div > div > h4 {
   font-weight: bold;
+}
+
+.usuario-pessoal {
+  margin-top: 2em;
 }
 
 .usuario-pessoal h2 {
