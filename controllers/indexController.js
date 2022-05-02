@@ -1,19 +1,20 @@
-module.exports = {
+const indexController = {
 
   home: (req, res) => {
-    res.render('home');
+    return res.render('home');
   },
   login: (req, res) => {
-    res.render('login');
+    return res.render('login');
   },
   lista: (req, res) => {
-    res.render('lista');
+    return res.render('lista');
   },
   finalizarCompra: (req, res) => {
     res.render('finalizacao-compra');
   },
   produtoInterno: (req, res) => {
-    res.render('produto-interno');
+    return res.render('produto-interno');
   }
 }
 
+module.exports = indexController;
