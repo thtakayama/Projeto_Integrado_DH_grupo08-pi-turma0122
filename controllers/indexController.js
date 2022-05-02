@@ -1,4 +1,4 @@
-module.exports = {
+const indexController = {
 
   home: (req, res) => {
     res.render('home');
@@ -17,3 +17,4 @@ module.exports = {
   }
 }
 
+module.exports = indexController;
