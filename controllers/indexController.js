@@ -10,7 +10,7 @@ module.exports = {
     res.render('lista');
   },
   finalizarCompra: (req, res) => {
-    res.render('finalização-compra');
+    res.render('finalizacao-compra');
   },
   produtoInterno: (req, res) => {
     res.render('produto-interno');
