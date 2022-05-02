@@ -6,6 +6,7 @@ var indexController = require('../controllers/indexController');
 router.get('/', indexController.home);
 router.get('/login', indexController.login);
 router.get('/lista', indexController.lista);
-router.get('/finalizar_compra', indexController.finalizarCompra);
+router.get('/finalizarCompra', indexController.finalizarCompra);
+router.get('/produtoInterno', indexController.produtoInterno);
 
 module.exports = router;
