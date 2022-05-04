@@ -55,6 +55,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  padding-left: 0px;
+}
+
 button {
   cursor: pointer;
 }
@@ -81,13 +85,10 @@ button.btn:hover a {
   color: #1572a1 !important;
 }
 
-.container {
-  max-width: 980px;
-  margin: 0px auto;
-}
 header {
   background: #1572a1;
 }
+
 .header-1 {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -147,16 +148,19 @@ ul.menus-header {
   margin-bottom: 0px;
 }
 ul.menus-header li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #efdad7;
-  border-radius: 40px;
-  width: 60px;
-  height: 60px;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
   color: #1572a1;
   text-align: center;
-  padding-top: 17px;
   cursor: pointer;
-  margin-left: 30px;
+  margin-left: 1em;
 }
+
 .dropbtn {
   display: inline-block;
   color: #1572a1;
@@ -164,16 +168,23 @@ ul.menus-header li {
   padding: 0px 0px;
   text-decoration: none;
 }
+
 li.dropdown {
   display: inline-block;
+  position: relative;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
   background-color: #efdad7;
   min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
   z-index: 1;
+  transition: .3s;
 }
 
 .dropdown-content a {
@@ -190,7 +201,10 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
+  opacity: 1;
+  top: 40px;
 }
+
 .header-2 {
   display: grid;
   grid-template-columns: 1fr;
@@ -200,6 +214,7 @@ li.dropdown {
   width: 100%;
   background: #efdad7;
 }
+
 ul.navbar {
   width: 100%;
   max-width: 700px;
@@ -208,6 +223,7 @@ ul.navbar {
   list-style-type: none;
   overflow: hidden;
 }
+
 ul.navbar li a {
   padding: 14px 16px;
   color: #04161f;
@@ -215,18 +231,51 @@ ul.navbar li a {
   text-decoration: none;
   transition: .3s;
 }
+
 ul.navbar li a:hover {
   color: white;
   background-color: #1572a1;
   border-radius: 5px;
 }
+
+/* CARRINHO */
+
+.carrinho-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrinho-info {
+  display: flex;
+}
+
+.carrinho-info img {
+  display: block;
+  max-width: 100px;
+  margin-right: 1em;
+}
+
+.carrinho-item .produto-comprar {
+  display: block;
+}
+
 .vitrine{
   display: flex;
-  justify-content: space-around;
   flex-wrap:wrap;
   align-items: stretch;
+  text-align: center;
+  margin: 2em -1em;
 }
-.livros-item{ width: 150px;
+
+.vitrine .livros-item {
+  min-width: 20%;
+  margin: 2em 1em;
+}
+
+.vitrine .livros-item h4.nome {
+  max-width: 300px;
+  min-height: 50px;
+  font-size: 1.2em;
 }
 
 /* mesagem de finalização de compra */
@@ -461,7 +510,7 @@ h2.preco {
 }
 
 .recomendacoes {
-  margin: 2em auto;
+  margin: 2em auto 4em auto;
 }
 
 .titulo {
@@ -470,6 +519,13 @@ h2.preco {
   text-align: center;
   font-weight: 700;
   margin-bottom: 1em;
+}
+
+.series {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 20px;
+  text-align: center;
 }
 
 .livros {
@@ -488,6 +544,7 @@ h2.preco {
 
 .livros-item h4 {
   font-weight: 700;
+  margin-top: .5em;
 }
 
 .livros-item h4.preco {
@@ -515,6 +572,24 @@ h2.preco {
 
 .livros-item button:hover a {
   color: #1572a1 !important;
+}
+
+.series-img {
+  overflow: hidden;
+  position: relative;
+  background-image:url(/img/banner/banner_editoraSabia-04.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.series-img img {
+  display: block;
+  position: relative;
+  max-height: 350px;
+  width: auto;
+  margin-left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0px);
 }
 
 /* PAINEL USUÁRIO */
@@ -612,4 +687,84 @@ h2.preco {
 .usuario-pessoal button.btn {
   max-width: 100px;
   align-self: flex-end;
+}
+
+/* CADASTRO */
+
+.cadastro {
+  display: flex;
+  margin: 2em auto;
+  font-weight: 500;
+}
+
+.cadastro-img, .cadastro-info {
+  flex: 1;
+}
+
+.cadastro-img {
+  min-width: 300px;
+  background-image: url(/img/banner/cadastrar-imagem.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.cadastro-img img {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.cadastro-info {
+  background: #efdad7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+}
+
+img.cadastro-logo {
+  max-width: 200px;
+  margin-bottom: 3em;
+}
+
+.cadastro-info h3 {
+  font-weight: bold;
+  color: #1572a1;
+  margin-bottom: 1em;
+}
+
+.cadastro form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.cadastro form label {
+  margin-bottom: .5em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cadastro form input {
+  margin-bottom: 1em;
+  border: 0px;
+  padding: .5em;
+}
+
+.cadastro form button {
+  margin: 2em 0px;
+}
+
+.cadastro-redes {
+  margin: 1em 0px;
+}
+
+.cadastro-redes a {
+  margin: 0px .5em;
+}
+
+.cadastro a.acessar {
+  color: #1572a1;
+  font-weight: bold;
 }
