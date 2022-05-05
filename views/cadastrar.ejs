@@ -1,53 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <!-- Responsividade -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <!-- Importando css -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="./fontawesome/css/all.css">
+<!-- Header -->
+<%- include('./partials/header') %>
 
-    <title>Editora Sabiá</title>
-  </head>
-  <body>
-    <!-- Header Principal -->
-    <header>
-      <div class="header-1">
-        <div class="logo"><a href="/index.html"><img src="./img/logos/logoBranco_editoraSabia.svg" alt="Ir para a Home"></a></div>
-        <div class="pesquisa">
-          <form action="/action_page.php">
-            <input type="text" placeholder="Livro ou Serie" name="search">
-            <button class="botao-pesquisa" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
-        </div>
-        <div  >
-          <ul class="menus-header">
-            <li class="dropdown">
-              <a href="javascript:void(0)" class="dropbtn"><i class="fa-solid fa-user"></i></a>
-                <div class="dropdown-content">
-                  <a href="/login.html">Login</a>
-                  <a href="/cadastro">Cadastrar</a>
-                  </div>
-            </li>
-            <li><i class="fa-solid fa-cart-shopping"></i></li>
-          </ul>
-        </div>
-        </div>
-    </header>
-    <!-- Navbar -->
-    <div class="header-2">
-      <ul class="navbar">
-        <li><a href="#">Categorias</a></li>
-        <li><a href="#">Lançamentos</a></li>
-        <li><a href="#">Livros</a></li>
-        <li><a href="#">E-books</a></li>
-        <li><a href="#">Séries</a></li>
-      </ul>
-    </div>
     <!-- Conteudo Cadastrar-->
     <main class="cadastro container">
         <div class="cadastro-img">
@@ -84,49 +37,9 @@
             <p>Ja tem uma conta? <a class="acessar">Acesse aqui!</a></p>
         </div>
     </main>
-    <!-- Footer -->
-    <footer>
-      <div class="container grid-footer">
-        <div class="logo">
-            <img src="/img/logos/logoPrincipal_editoraSabia.svg">
-        </div>
-        <div>
-            <h5>Sobre Nós</h5>
-            <ul>
-                <li><a href="">Quem somos</a></li>
-                <li><a href="">Localização das lojas</a></li>
-            </ul>
-        </div>
-        <div>
-            <h5>Contato</h5>
-            <ul>
-                <li><a href="">Fale conosco</a></li>
-                <li><a href="">Trabalhe conosco</a></li>
-            </ul>
-        </div>
-        <div>
-            <h5>Redes Sociais</h5>
-            <ul class="redes-sociais">
-                <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-                <li><a href="https://br.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-            </ul>
-            <h5>Formas de pagamento</h5>
-            <ul class="pagamentos">
-                <li><a><img src="/img/icon/visa.png"></a></li>
-                <li><a><img src="/img/icon/mastercard.png"></a></li>
-                <li><a><img src="/img/icon/americanexpress.png"></a></li>
-                <li><a><img src="/img/icon/paypal.png"></a></li>
-            </ul>
-        </div>
-    </div>
-    </footer>
 
+<!-- Carrinho -->
+<%- include('./partials/carrinho') %>
 
-
-
-    <!--Scripts para funcionamento do bootstrap  -->
-    <script type="text/javascript" src="/js/bootstrap.js"></script>
-  </body>
-</html>
+<!-- Footer -->
+<%- include('./partials/footer') %>
