@@ -14,6 +14,9 @@ const indexController = {
   },
   produtoInterno: (req, res) => {
     res.render('produto-interno');
+  },
+  cadastrar: (req, res) => {
+    res.render('cadastro')
   }
 }
 
