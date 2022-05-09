@@ -8,13 +8,13 @@
         <div class="cadastro-info">
             <img class="cadastro-logo" src="/img/logos/logoPreto_editoraSabia.svg">
             <h3>Criar conta</h3>
-            <form>
+            <form action="/cadastro" method="POST">
                 <label>Nome Completo:</label>
-                <input>
-                <label>E-mail</label>
-                <input>
+                <input name="nome" id="nome">
+                <label>E-mail:</label>
+                <input name="email" id="email">
                 <label>Senha:</label>
-                <input>
+                <input name="senha" id="senha">
                 <button class="btn"><a>Criar conta</a></button>
             </form>
             <p>Ou crie ultilizando sua conta:</p>
