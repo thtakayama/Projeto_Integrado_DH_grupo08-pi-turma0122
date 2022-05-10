@@ -2,55 +2,35 @@
 <%- include('./partials/header') %>
 
 <!-- Conteúdo -->
-   <div class="container">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-         </ol>
-         <!-- Wrapper for slides -->
-         <div class="carousel-inner">
-            <div class="item active">
-               <img src="./img/brasileira/capitaes-da-areia.webp" alt="Los Angeles" style="width:100%;">
-            </div>
+   <!-- Conteudo Login-->
+   <main class="login container">
+      <div class="login-img">
+      </div>
+      <div class="login-info">
+          <img class="login-logo" src="/img/logos/logoPreto_editoraSabia.svg">
+          <h3>Bem vindo a Editora Sabiá!</h3>
+          <form action="/login" method="POST">
+              <label>User name ou E-mail:</label>
+              <input name="nome" id="nome">
+              <label>Senha:</label>
+              <input name="senha" id="senha">
+              <button class="btn"><a>Acessar</a></button>
+          </form>
+          <p>Ou autenticar usando sua conta em:</p>
+          <div class="login-redes">
+              <a class="btn btn-outline-dark" href="/users/googleauth" role="button" style="text-transform:none">
+                  Acesse com
+                  <i class="fa-brands fa-google"></i>
+              </a>
 
-            <div class="item">
-               <img src="./img/estrangeira/a-menina-que-roubava-livros.webp" alt="Chicago" style="width:100%;">
-            </div>
-
-            <div class="item">
-               <img src="./img/estrangeira/mitologia-nordica.webp" alt="New york" style="width:100%;">
-            </div>
-         </div>
+              <a class="btn btn-outline-dark" href="/users/googleauth" role="button" style="text-transform:none">
+                  Acesse com
+                  <i class="fa-brands fa-facebook-f"></i>
+              </a>
+          </div>
+          <p>Novo por aqui? <a class="acessar">Crie sua conta!</a></p>
       </div>
-   </div>
-   <div class="cadastro">
-      <div class="logo">
-         <a href="/index.html"><img src="./img/logos/logoBranco_editoraSabia.svg" alt="Home"></a>
-      </div>
-      <div class="formulario">
-         <h3>Bem vindo a Editora Sabiá!</h3>
-         <form action="">
-            <label for="email">Nome de usuario ou Email</label>
-            <input type="email" name="Email" id="user or email" placeholder="example@gmail.com">
-            <label for="password">Senha</label>
-            <input type="password" name="password" id="password" placeholder="Digite sua senha ">
-            <a href="#" id="forgot-pass">Esqueceu sua senha?</a>
-            <input type="submit" id="submit" value="Acessar">
-         </form>
-      </div>
-      <div class="redes-sociais">
-         <p>Ou acesse pelas redes sociais</p>
-         <i class="fa-brands fa-google"></i>
-         <i class="fa-brands fa-facebook-f"></i>
-         <i class="fa-brands fa-apple"></i>
-      </div>
-      <div class="registrar">
-         <p>Novo por aqui?</p>
-         <a href="./cadastro.html">Crie sua conta!</a>
-      </div>
-   </div>
+  </main>
 
 <!-- Carrinho -->
 <%- include('./partials/carrinho') %>

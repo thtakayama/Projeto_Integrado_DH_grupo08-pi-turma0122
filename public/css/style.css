@@ -689,15 +689,15 @@ h2.preco {
   align-self: flex-end;
 }
 
-/* CADASTRO */
+/* CADASTRO  E LOGIN */
 
-.cadastro {
+.cadastro, .login {
   display: flex;
   margin: 2em auto;
   font-weight: 500;
 }
 
-.cadastro-img, .cadastro-info {
+.cadastro-img, .cadastro-info, .login-img, .login-info {
   flex: 1;
 }
 
@@ -708,14 +708,21 @@ h2.preco {
   background-size: cover;
 }
 
-.cadastro-img img {
+.login-img {
+  min-width: 300px;
+  background-image: url(/img/banner/login-imagem.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.cadastro-img img, .login-img img {
   display: block;
   position: relative;
   max-width: 100%;
   height: auto;
 }
 
-.cadastro-info {
+.cadastro-info, .login-info {
   background: #efdad7;
   display: flex;
   flex-direction: column;
@@ -724,47 +731,47 @@ h2.preco {
   padding: 2em 1em;
 }
 
-img.cadastro-logo {
+img.cadastro-logo, img.login-logo {
   max-width: 200px;
   margin-bottom: 3em;
 }
 
-.cadastro-info h3 {
+.cadastro-info h3, .login-info h3 {
   font-weight: bold;
   color: #1572a1;
   margin-bottom: 1em;
 }
 
-.cadastro form {
+.cadastro form, .login form {
   display: flex;
   flex-direction: column;
   width: 80%;
 }
 
-.cadastro form label {
+.cadastro form label, .login form label {
   margin-bottom: .5em;
   font-family: 'Montserrat', sans-serif;
 }
 
-.cadastro form input {
+.cadastro form input, .login form input {
   margin-bottom: 1em;
   border: 0px;
   padding: .5em;
 }
 
-.cadastro form button {
+.cadastro form button, .login form button {
   margin: 2em 0px;
 }
 
-.cadastro-redes {
+.cadastro-redes, .login-redes {
   margin: 1em 0px;
 }
 
-.cadastro-redes a {
+.cadastro-redes a, .login-redes a {
   margin: 0px .5em;
 }
 
-.cadastro a.acessar {
+.cadastro a.acessar, .login a.acessar {
   color: #1572a1;
   font-weight: bold;
 }
