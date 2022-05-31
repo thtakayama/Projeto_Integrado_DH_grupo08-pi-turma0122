@@ -1,0 +1,26 @@
+<!-- Header -->
+<%- include('./partials/header') %>
+
+<!-- Conteúdo -->
+   <!-- Conteudo Login-->
+   <main class="login container">
+      <div class="admin-img">
+      </div>
+      <div class="login-info">
+          <img class="login-logo" src="/img/logos/logoPreto_editoraSabia.svg">
+          <h3>Área administrativa</h3>
+          <form action="/login" method="POST">
+              <label>E-mail:</label>
+              <input name="nome" id="nome">
+              <label>Senha:</label>
+              <input name="senha" id="senha">
+              <button class="btn"><a>Acessar</a></button>
+          </form>
+      </div>
+  </main>
+
+<!-- Carrinho -->
+<%- include('./partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('./partials/footer') %>

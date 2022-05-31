@@ -697,7 +697,7 @@ h2.preco {
   font-weight: 500;
 }
 
-.cadastro-img, .cadastro-info, .login-img, .login-info {
+.cadastro-img, .cadastro-info, .login-img, .login-info, .admin-img {
   flex: 1;
 }
 
@@ -715,11 +715,11 @@ h2.preco {
   background-size: cover;
 }
 
-.cadastro-img img, .login-img img {
-  display: block;
-  position: relative;
-  max-width: 100%;
-  height: auto;
+.admin-img {
+  min-width: 300px;
+  background-image: url(/img/banner/adm-imagem.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .cadastro-info, .login-info {

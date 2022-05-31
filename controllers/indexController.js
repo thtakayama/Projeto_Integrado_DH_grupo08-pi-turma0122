@@ -46,6 +46,10 @@ const indexController = {
     res.redirect('login');
   },
 
+  loginAdm: (req, res) => {
+    res.render('adm-login');
+  },
+
   painelUsuario: (req, res) => {
     res.render('painel-usuario');
   },

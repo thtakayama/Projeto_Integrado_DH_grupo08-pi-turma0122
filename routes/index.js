@@ -10,6 +10,7 @@ router.get('/finalizarCompra', indexController.finalizarCompra);
 router.get('/produtoInterno', indexController.produtoInterno);
 router.get('/cadastro', indexController.cadastrar);
 router.post('/cadastro', indexController.acaoCadastrar);
+router.get('/login-adm', indexController.loginAdm);
 router.get('/painel-usuario', indexController.painelUsuario);
 router.get('/painel-usuario-enderecos', indexController.painelUsuarioEnderecos);
 router.get('/painel-usuario-pedidos', indexController.painelUsuarioPedidos);
