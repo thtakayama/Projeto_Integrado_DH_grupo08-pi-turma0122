@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `editora_sabia`.`clientes` (
   )
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `editora_sabia`.`endereco` (
+CREATE TABLE IF NOT EXISTS `editora_sabia`.`enderecos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `logradouro` VARCHAR(100) NOT NULL,
   `complemento` VARCHAR(45) NOT NULL,
@@ -48,29 +48,29 @@ CREATE TABLE IF NOT EXISTS `editora_sabia`.`endereco` (
   `cidade` VARCHAR(100) NOT NULL,
   `estado` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `fk_endereco_clientes`
+  CONSTRAINT `fk_enderecos_clientes`
     FOREIGN KEY (`clientes_id`)
     REFERENCES `editora_sabia`.`clientes` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `editora_sabia`.`genero` (
+CREATE TABLE IF NOT EXISTS `editora_sabia`.`generos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `editora_sabia`.`genero_has_produtos` (
-  `genero_id` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `editora_sabia`.`generos_has_produtos` (
+  `generos_id` INT NOT NULL,
   `produtos_id` INT NOT NULL,
-  PRIMARY KEY (`genero_id`, `produtos_id`),
-  CONSTRAINT `fk_genero_has_produtos_genero`
+  PRIMARY KEY (`generos_id`, `produtos_id`),
+  CONSTRAINT `fk_generos_has_produtos_genero`
     FOREIGN KEY (`genero_id`)
-    REFERENCES `livraria_saraiva`.`genero` (`id`)
+    REFERENCES `livraria_saraiva`.`generos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_genero_has_produtos_produtos`
+  CONSTRAINT `fk_generos_has_produtos_produtos`
     FOREIGN KEY (`produtos_id`)
     REFERENCES `editora_sabia`.`produtos` (`id`)
     ON DELETE NO ACTION
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `editora_sabia`.`pedidos_has_produtos` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `editora_sabia`.`usuario` (
+CREATE TABLE IF NOT EXISTS `editora_sabia`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL UNIQUE,
