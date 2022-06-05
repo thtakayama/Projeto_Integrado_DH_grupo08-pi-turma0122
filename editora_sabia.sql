@@ -65,8 +65,8 @@ CREATE TABLE IF NOT EXISTS `editora_sabia`.`generos_has_produtos` (
   `generos_id` INT NOT NULL,
   `produtos_id` INT NOT NULL,
   PRIMARY KEY (`generos_id`, `produtos_id`),
-  CONSTRAINT `fk_generos_has_produtos_genero`
-    FOREIGN KEY (`genero_id`)
+  CONSTRAINT `fk_generos_has_produtos_generos`
+    FOREIGN KEY (`generos_id`)
     REFERENCES `livraria_saraiva`.`generos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
