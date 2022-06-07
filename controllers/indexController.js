@@ -1,10 +1,8 @@
-// const usuarios = require('../database/usuarios.json');
-const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const { userInfo } = require('os');
 
-const indexController = {
+module.exports = {
 
   home: (req, res) => {
     res.render('home');
@@ -32,18 +30,7 @@ const indexController = {
 
   acaoCadastrar: (req, res) => {
 
-    // const { nome, email, senha } = req.body;
-    // const senhaEnc = bcrypt.hashSync(senha, 10);
-    // let id = usuarios[usuarios.length -1].id +1;
-    // const usuario = { id, nome, email, senha: senhaEnc };
-    // usuarios.push(usuario);
-    // fs.writeFileSync(path.join('database', 'Usuarios.json'), JSON.stringify(usuarios));
-    // res.redirect('login');
 
-  },
-
-  loginAdm: (req, res) => {
-    res.render('adm-login');
   },
 
   painelUsuario: (req, res) => {
@@ -58,5 +45,3 @@ const indexController = {
     res.render('painel-usuario-pedidos');
   }
 }
-
-module.exports = indexController;

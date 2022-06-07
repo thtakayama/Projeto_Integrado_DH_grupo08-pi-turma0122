@@ -1,0 +1,777 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #04161f;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+h3 {
+  font-size: 1.875em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.125em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #04161f;
+}
+
+a {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button.btn {
+  background-color: #1572a1;
+  border: 3px solid #1572a1;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+button.btn:hover {
+  background-color: white;
+}
+
+button.btn a {
+  color: white !important;
+  font-weight: 700;
+}
+
+button.btn:hover a {
+  color: #1572a1 !important;
+}
+
+header {
+  background: #1572a1;
+}
+
+.header-1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: #1572a1;
+  padding: 1vh;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  max-width: 980px;
+  margin: 0px auto;
+}
+.logo {
+  max-height: 6vh;
+  width: 14vh;
+}
+
+.logo img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.pesquisa {
+  padding: 1.5vh;
+}
+form {
+  height: 100%;
+  display: flex;
+}
+.pesquisa input {
+  border: 0;
+  border-radius: 5px;
+  padding-left: 5px;
+  width: 50vh;
+  height: 5vh;
+  box-shadow: none;
+  outline: none;
+}
+button.botao-pesquisa {
+  border: 0;
+  border-radius: 5px;
+  background: #ffffff;
+  height: 5vh;
+  width: 5vh;
+  box-shadow: none;
+  outline: none;
+  margin-left: 1vh;
+}
+ul.menus-header {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+ul.menus-header li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efdad7;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  color: #1572a1;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.dropbtn {
+  display: inline-block;
+  color: #1572a1;
+  text-align: center;
+  padding: 0px 0px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  background-color: #efdad7;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  z-index: 1;
+  transition: .3s;
+}
+
+.dropdown-content a {
+  color: #1572a1;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  top: 40px;
+}
+
+.header-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1vh;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  background: #efdad7;
+}
+
+ul.navbar {
+  width: 100%;
+  max-width: 700px;
+  height: 5vh;
+  margin: 0px auto;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+ul.navbar li a {
+  padding: 14px 16px;
+  color: #04161f;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+}
+
+ul.navbar li a:hover {
+  color: white;
+  background-color: #1572a1;
+  border-radius: 5px;
+}
+
+/* CARRINHO */
+
+.carrinho-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrinho-info {
+  display: flex;
+}
+
+.carrinho-info img {
+  display: block;
+  max-width: 100px;
+  margin-right: 1em;
+}
+
+.carrinho-item .produto-comprar {
+  display: block;
+}
+
+.vitrine{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: stretch;
+  text-align: center;
+  margin: 2em -1em;
+}
+
+.vitrine .livros-item {
+  min-width: 20%;
+  margin: 2em 1em;
+}
+
+.vitrine .livros-item h4.nome {
+  max-width: 300px;
+  min-height: 50px;
+  font-size: 1.2em;
+}
+
+/* mesagem de finalização de compra */
+
+#confirmacao{
+  background-color: rgb(239, 218, 215);
+  width: 60vw;
+  height: 50vh;
+  margin: 100px auto;
+}
+
+#confirmacao h1{
+  font-size: 50px;
+  display: flex;
+  padding: 140px 140px 140px 140px;
+  text-align: center;
+}
+
+/* fim da finalização de compra */
+
+
+footer {
+  background-color: #f1f1f1;
+  padding: 2rem 0px;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.grid-footer h5 {
+  color: #1572a1;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.grid-footer .logo img {
+  display: block;
+  max-width: 180px;
+  height: auto;
+}
+
+.grid-footer ul {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+.grid-footer ul li {
+  margin-bottom: 0.5em;
+}
+
+.grid-footer ul li a {
+  color: #04161f;
+}
+
+ul.redes-sociais,
+ul.pagamentos {
+  display: flex;
+  margin: 1em -0.5em;
+}
+
+ul.pagamentos li {
+  margin: 0px 0.5em;
+}
+
+ul.redes-sociais li {
+  background-color: #efdad7;
+  border-radius: 25px;
+  width: 40px;
+  height: 40px;
+  margin: 0px 0.5em;
+}
+
+ul.redes-sociais li:hover {
+  background: #1572a1;
+}
+
+ul.redes-sociais li a i {
+  color: #1572a1;
+  margin-left: 50%;
+  margin-top: 50%;
+  transform: translate3d(-50%, -50%, 0px);
+  transition: 0.3s;
+}
+
+ul.redes-sociais li:hover a i {
+  color: white;
+}
+
+.produto {
+  display: flex;
+  margin-top: 2em;
+}
+
+.produto-galeria {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.galeria-thumb {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem -5px;
+}
+
+.galeria-imagem {
+  width: 340px;
+  height: 340px;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+}
+
+.galeria-imagem img {
+  display: flex;
+  position: relative;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.galeria-thumb span {
+  background-color: grey;
+  min-width: 50px;
+  min-height: 50px;
+  margin: 5px;
+}
+
+.produto-info {
+  flex: 2;
+  padding: 2rem;
+}
+
+.produto-info h2 {
+  font-weight: 700;
+}
+
+h2.preco {
+  color: #1572a1;
+  margin-bottom: 1.5em;
+}
+
+.produto-info h6 {
+  margin-bottom: 2.5em;
+}
+
+.produto-comprar {
+  display: flex;
+}
+
+.produto-comprar ul {
+  display: flex;
+  list-style: none;
+}
+
+.produto-comprar ul li {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #efdad7;
+}
+
+.produto-comprar ul li a {
+  display: block;
+  color: #04161f;
+  font-weight: 700;
+  text-align: center;
+  transform: translate3d(0px, 50%, 0px);
+}
+
+.produto-comprar ul li:first-child,
+.produto-comprar ul li:last-child {
+  background-color: #efdad7;
+}
+
+.produto-comprar ul li:first-child {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.produto-comprar ul li:last-child {
+  border-radius: 0px 3px 3px 0px;
+}
+
+.produto-comprar button {
+  background-color: #1572a1;
+  padding: 0.5em 1rem;
+  border: 2px solid #1572a1;
+  border-radius: 5px;
+  margin-left: 2em;
+  transition: 0.3s;
+}
+
+.produto-comprar button a {
+  color: white !important;
+  font-weight: bold;
+}
+
+.produto-comprar button:hover {
+  background-color: white;
+}
+
+.produto-comprar button:hover a {
+  color: #1572a1 !important;
+}
+
+.tab {
+  margin-top: 1em;
+}
+
+.tab-nav ul {
+  list-style: none;
+  display: flex;
+  border-bottom: 2px solid #9ad0ec;
+}
+
+.tab-nav ul li {
+  padding: 0.5em 1em;
+  font-weight: 700;
+  border: 2px solid #9ad0ec;
+  border-bottom: 0px;
+  border-radius: 3px 3px 0px 0px;
+  margin: 0px 10px;
+}
+
+.tab-nav ul li:first-child {
+  margin-left: 0px;
+}
+
+.tab-content {
+  padding: 1em;
+}
+
+.recomendacoes {
+  margin: 2em auto 4em auto;
+}
+
+.titulo {
+  background-color: #efdad7;
+  padding: 0.5em 1em;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.series {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 20px;
+  text-align: center;
+}
+
+.livros {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+}
+
+.livros-item img {
+  display: block;
+  max-height: 300px;
+  width: auto;
+  margin: 0px auto;
+}
+
+.livros-item h4 {
+  font-weight: 700;
+  margin-top: .5em;
+}
+
+.livros-item h4.preco {
+  color: #1572a1;
+  margin: 0.5em 0px 1em 0px;
+}
+
+.livros-item button {
+  background-color: #1572a1;
+  border: 3px solid #1572a1;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.livros-item button:hover {
+  background-color: white;
+}
+
+.livros-item button a {
+  color: white !important;
+  font-weight: 700;
+}
+
+.livros-item button:hover a {
+  color: #1572a1 !important;
+}
+
+.series-img {
+  overflow: hidden;
+  position: relative;
+  background-image:url(/img/banner/banner_editoraSabia-04.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.series-img img {
+  display: block;
+  position: relative;
+  max-height: 350px;
+  width: auto;
+  margin-left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0px);
+}
+
+/* PAINEL USUÁRIO */
+
+.grid-painel {
+  padding: 2em 0px;
+  display: flex;
+  width: 100%;
+}
+
+.painel-menu {
+  flex: 1;
+}
+
+.usuario-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.usuario-img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background: #efdad7;
+}
+
+.usuario-info h6 {
+  font-weight: bold;
+}
+
+.usuario-info p:last-child {
+  margin-bottom: 0px;
+}
+
+.painel-menu nav ul {
+  list-style: none;
+}
+
+.painel-menu nav ul li {
+  padding: .5em .8em;
+  border-bottom: 2px solid #efdad7;
+  transition: 0.3s;
+}
+
+.painel-menu nav ul li a {
+  color: #1572a1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.painel-menu nav ul li.active, .painel-menu nav ul li:hover {
+  background: #efdad7;
+  border-radius: 5px;
+}
+
+.painel-menu nav ul li.active a, .painel-menu nav ul li:hover a {
+  color: #04161f;
+  font-weight: bold;
+}
+
+.painel-conteudo {
+  margin-left: 2em;
+  flex: 3;
+}
+
+.painel-conteudo div > div > h4 {
+  font-weight: bold;
+}
+
+.usuario-pessoal {
+  margin-top: 2em;
+}
+
+.usuario-pessoal h2 {
+  color: #1572a1;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.info-pessoal {
+  width: 100%;
+  background: #f1f1f1;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.info-pessoal > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.usuario-pessoal button.btn {
+  max-width: 100px;
+  align-self: flex-end;
+}
+
+/* CADASTRO  E LOGIN */
+
+.cadastro, .login {
+  display: flex;
+  margin: 2em auto;
+  font-weight: 500;
+}
+
+.cadastro-img, .cadastro-info, .login-img, .login-info, .admin-img {
+  flex: 1;
+}
+
+.cadastro-img {
+  min-width: 300px;
+  background-image: url(/img/banner/cadastrar-imagem.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.login-img {
+  min-width: 300px;
+  background-image: url(/img/banner/login-imagem.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.admin-img {
+  min-width: 300px;
+  background-image: url(/img/banner/adm-imagem.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.cadastro-info, .login-info {
+  background: #efdad7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+}
+
+img.cadastro-logo, img.login-logo {
+  max-width: 200px;
+  margin-bottom: 3em;
+}
+
+.cadastro-info h3, .login-info h3 {
+  font-weight: bold;
+  color: #1572a1;
+  margin-bottom: 1em;
+}
+
+.cadastro form, .login form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.cadastro form label, .login form label {
+  margin-bottom: .5em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cadastro form input, .login form input {
+  margin-bottom: 1em;
+  border: 0px;
+  padding: .5em;
+}
+
+.cadastro form button, .login form button {
+  margin: 2em 0px;
+}
+
+.cadastro-redes, .login-redes {
+  margin: 1em 0px;
+}
+
+.cadastro-redes a, .login-redes a {
+  margin: 0px .5em;
+}
+
+.cadastro a.acessar, .login a.acessar {
+  color: #1572a1;
+  font-weight: bold;
+}
