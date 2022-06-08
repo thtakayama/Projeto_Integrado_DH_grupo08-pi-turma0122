@@ -45,10 +45,59 @@
             </div>
           </div>
         </div>
+
+        <div id="dados-endereco" class="usuario-pessoal">
+          <h2>Endereço de entrega</h2>
+          <div class="info-pessoal">
+            <div id="pessoal-pronto">
+              <form class="usuario-editar">
+                <div>
+                  <label>Endereço</label>
+                  <input type="text" name="endereco" />
+                </div>
+                <div>
+                  <label>Complemento</label>
+                  <input type="text" name="complemento" />
+                </div>
+                <div>
+                  <label>Bairro</label>
+                  <input type="text" name="bairro" />
+                </div>
+                <div>
+                  <label>Cidade</label>
+                  <input type="text" name="cidade" />
+                </div>
+                <div>
+                  <label>Estado</label>
+                  <input type="text" name="estado" />
+                </div>
+                <div>
+                  <label>CEP</label>
+                  <input type="text" name="cep" />
+                </div>
+                <button type="submit" class="btn"><a>Salvar</a></button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div id="dados-configuracoes" class="usuario-pessoal">
+          <h2>Configurações</h2>
+          <div class="info-pessoal">
+            <div id="pessoal-pronto">
+              <div>
+                <h4>Redefinir senha</h4>
+                <p>************</p>
+              </div>
+              <button class="btn"><a>Editar</a></button>
+            </div>
+          </div>
+        </div>
+
       </section>
     </section>
-  
-  <!-- Carrinho -->
+
+<!-- Carrinho -->
 <%- include('./partials/carrinho') %>
 
 <!-- Footer -->

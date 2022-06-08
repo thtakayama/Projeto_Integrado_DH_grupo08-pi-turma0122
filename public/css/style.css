@@ -689,6 +689,31 @@ h2.preco {
   align-self: flex-end;
 }
 
+/* PAINEL USUARIO EDITAR */
+
+form.usuario-editar, form.usuario-editar > div {
+  display: flex;
+  flex-direction: column;
+}
+
+form.usuario-editar > div {
+  margin-bottom: 1em;
+}
+
+form.usuario-editar label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #04161f;
+  margin-bottom: .5em;
+}
+
+form.usuario-editar input {
+  padding: .5em;
+  border: 2px solid #efdad7;
+  border-radius: 5px;
+}
+
 /* CADASTRO  E LOGIN */
 
 .cadastro, .login {

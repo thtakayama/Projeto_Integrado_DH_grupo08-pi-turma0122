@@ -37,8 +37,16 @@ module.exports = {
     res.render('painel-usuario');
   },
 
+  painelUsuarioPessoais: (req, res) => {
+    res.render('painel-usuario-pessoais');
+  },
+
   painelUsuarioEnderecos: (req, res) => {
     res.render('painel-usuario-enderecos');
+  },
+
+  painelUsuarioConfiguracoes: (req, res) => {
+    res.render('painel-usuario-configuracoes');
   },
 
   painelUsuarioPedidos: (req, res) => {

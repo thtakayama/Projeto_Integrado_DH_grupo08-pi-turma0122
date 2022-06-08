@@ -28,21 +28,21 @@
         <div id="dados-pessoais" class="usuario-pessoal">
           <h2>Dados Pessoais</h2>
           <div class="info-pessoal">
-            <div id="pessoal-pronto">
+            <form class="usuario-editar">
               <div>
-                <h4>Nome Completo</h4>
-                <p>André Santos</p>
+                <label>Nome Completo</label>
+                <input type="text" name="nome" />
               </div>
               <div>
-                <h4>E-mail</h4>
-                <p>andre@gmail.com</p>
+                <label>E-mail</label>
+                <input type="email" name="email" />
               </div>
               <div>
-                <h4>CPF</h4>
-                <p>456.485.658-96</p>
+                <label>CPF</label>
+                <input type="text" name="cpf" />
               </div>
-              <button class="btn"><a>Editar</a></button>
-            </div>
+              <button type="submit" class="btn"><a>Salvar</a></button>
+            </form>
           </div>
         </div>
 
@@ -52,7 +52,7 @@
             <div id="pessoal-pronto">
               <div>
                 <h4>Endereço</h4>
-                <p>Rua Tibiriça, 278</p>
+                <p>Rua Tibiriça, 278 - Rebouças</p>
               </div>
               <div>
                 <h4>Complemento</h4>
