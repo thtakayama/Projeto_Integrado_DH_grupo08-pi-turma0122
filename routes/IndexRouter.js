@@ -11,9 +11,9 @@ router.get('/produtoInterno', IndexController.produtoInterno);
 router.get('/cadastro', IndexController.cadastrar);
 router.post('/cadastro', IndexController.acaoCadastrar);
 router.get('/painel-usuario', IndexController.painelUsuario);
-router.get('/painel-usuario-pessoais', IndexController.painelUsuarioPessoais);
+// router.get('/painel-usuario-pessoais', IndexController.painelUsuarioPessoais);
 router.get('/painel-usuario-enderecos', IndexController.painelUsuarioEnderecos);
-router.get('/painel-usuario-configuracoes', IndexController.painelUsuarioConfiguracoes);
+// router.get('/painel-usuario-configuracoes', IndexController.painelUsuarioConfiguracoes);
 router.get('/painel-usuario-pedidos', IndexController.painelUsuarioPedidos);
 
 module.exports = router;

@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `editora_sabia`.`clientes` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
   `email` VARCHAR(100) NOT NULL UNIQUE,
-  `cpf` CHAR(13) NOT NULL,
+  `cpf` CHAR(13),
   `senha` VARCHAR(256) NOT NULL,
   PRIMARY KEY (`id`)
   )
