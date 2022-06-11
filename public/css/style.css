@@ -509,7 +509,7 @@ h2.preco {
   padding: 1em;
 }
 
-.recomendacoes {
+.recomendacoes, .produtos {
   margin: 2em auto 4em auto;
 }
 
@@ -799,4 +799,16 @@ img.cadastro-logo, img.login-logo {
 .cadastro a.acessar, .login a.acessar {
   color: #1572a1;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 740px) and (max-width: 979px) {
+  .livros {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 739px) {
+  .livros {
+    grid-template-columns: 1fr;
+  }
 }

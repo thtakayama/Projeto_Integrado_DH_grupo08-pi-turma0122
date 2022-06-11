@@ -14,8 +14,8 @@ module.exports = {
     res.render('login');
   },
 
-  lista: (req, res) => {
-    res.render('lista');
+  produtos: (req, res) => {
+    res.render('produtos');
   },
 
   finalizarCompra: (req, res) => {
