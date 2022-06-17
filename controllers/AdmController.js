@@ -6,5 +6,11 @@ module.exports = {
     
   login: (req, res) => {
     res.render('adm/login')
+  },
+  produtos: (req,res) => {
+    res.render('adm/produtos')
+  },
+  produtosCadastrar: (req,res) => {
+    res.render('adm/produtosCadastrar')
   }
 }

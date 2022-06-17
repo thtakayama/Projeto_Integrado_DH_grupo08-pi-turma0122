@@ -1,0 +1,29 @@
+<!-- Header -->
+<%- include('../partials/header') %>
+
+<!-- Conteúdo -->
+<section class="container painel-produtos">
+    <h1>Painel Administrativo</h1>
+    <h2>Produtos</h2>
+    <a href="/adm/produtos/cadastrar" class="btn-adicionar">Adicionar novo</a>
+
+    <!-- Tabela de Produtos -->
+    <table class="tabela-produtos">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Preço</th>
+                <th>Descrição</th>
+                <th>Avaliação</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</section>
+<!-- Carrinho -->
+<%- include('../partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('../partials/footer') %>
