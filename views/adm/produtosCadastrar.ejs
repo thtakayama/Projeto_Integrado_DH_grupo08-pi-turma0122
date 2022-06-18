@@ -2,14 +2,18 @@
 <%- include('../partials/header') %>
 
 <!-- Conteúdo -->
-<section class="container">
+<section class="container painel-produtos">
     <h1>Painel Administrativo</h1>
     <h2>Produtos - Cadastrar</h2>
 
-    <form method="POST" action="/adm/produtos/acaoCadastrar">
+    <form method="POST" action="/adm/acao-cadastrar-produtos">
         <div>
             <label>Título:</label>
             <input type="text" name="titulo" />
+        </div>
+        <div>
+            <label>Autor:</label>
+            <input type="text" name="autor" />
         </div>
         <div>
             <label>Preço:</label>
@@ -20,7 +24,7 @@
             <textarea name="descricao"></textarea>
         </div>
         <div>
-            <label>Avaliação</label>
+            <label>Avaliação:</label>
             <input type="text" name="avaliacao" />
         </div>
 

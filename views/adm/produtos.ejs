@@ -5,13 +5,14 @@
 <section class="container painel-produtos">
     <h1>Painel Administrativo</h1>
     <h2>Produtos</h2>
-    <a href="/adm/produtos/cadastrar" class="btn-adicionar">Adicionar novo</a>
+    <a href="/adm/cadastrar-produtos" class="btn-adicionar">Adicionar novo</a>
 
     <!-- Tabela de Produtos -->
     <table class="tabela-produtos">
         <thead>
             <tr>
                 <th>Título</th>
+                <th>Autor</th>
                 <th>Preço</th>
                 <th>Descrição</th>
                 <th>Avaliação</th>
@@ -19,6 +20,21 @@
             </tr>
         </thead>
         <tbody>
+            <% for(produto of produtos) { %>
+                <tr>
+                    <td><%= produto.titulo %></td>
+                    <td><%= produto.autor %></td>
+                    <td><%= produto.preco %></td>
+                    <td><%= produto.descricao %></td>
+                    <td><%= produto.avaliacao %></td>
+                    <td>
+                        <div class="acoes">
+                            <a href="/adm/editar-produtos/<%= produto.id %>" class="btn-editar">Editar</a>
+                            <a href="/adm/excluir-produtos/<%= produto.id %>" class="btn-excluir">Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+            <% } %>
         </tbody>
     </table>
 </section>

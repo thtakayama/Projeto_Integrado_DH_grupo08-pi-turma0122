@@ -715,7 +715,7 @@ form.usuario-editar input {
 }
 
 /* PAINEL ADMINISTRATIVO */
-a.btn-adicionar {
+a.btn-adicionar, a.btn-editar, .painel-produtos form button {
   color: white !important;
   font-weight: 700;
   background-color: #1572a1;
@@ -726,8 +726,24 @@ a.btn-adicionar {
   transition: 0.3s;
 }
 
-a.btn-adicionar:hover {
+a.btn-adicionar:hover, a.btn-editar:hover, .painel-produtos form button:hover {
   color: #1572a1 !important;
+  background-color: white;
+}
+
+a.btn-excluir {
+  color: white !important;
+  font-weight: 700;
+  background-color: red;
+  border: 3px solid red;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+a.btn-excluir:hover {
+  color: red !important;
   background-color: white;
 }
 
@@ -746,13 +762,57 @@ table.tabela-produtos {
   width: 100%;
 }
 
-table.tabela-produtos th {
+table.tabela-produtos th, table.tabela-produtos td {
   padding: .5em 1em;
   border: 2px solid #9ad0ec;
 }
 
 table.tabela-produtos thead th {
   text-align: center;
+}
+
+.acoes {
+  margin: .5em 1em;
+}
+
+.painel-produtos form {
+  display: block;
+  position: relative;
+  margin-bottom: 4em;
+}
+
+.painel-produtos form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.painel-produtos form > div label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #04161f;
+}
+
+.painel-produtos form > div input,.painel-produtos form > div textarea {
+  margin: .5em 0px 1em 0px;
+  padding: .5em;
+  border: 2px solid #9ad0ec;
+  width: 100%;
+}
+
+.painel-produtos form > div input:focus,.painel-produtos form > div textarea:focus {
+  outline: none;
+}
+
+.painel-produtos form > div textarea {
+  resize: none;
+  min-height: 200px;
+}
+
+.painel-produtos form button {
+  width: auto;
+  float: right;
 }
 
 /* CADASTRO  E LOGIN */
