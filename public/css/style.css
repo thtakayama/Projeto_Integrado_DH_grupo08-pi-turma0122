@@ -124,7 +124,7 @@ form {
   border: 0;
   border-radius: 5px;
   padding-left: 5px;
-  width: 50vh;
+  width: 100%;
   height: 5vh;
   box-shadow: none;
   outline: none;
@@ -206,33 +206,35 @@ li.dropdown {
 }
 
 .header-2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 1vh;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 100%;
   background: #efdad7;
 }
 
-ul.navbar {
-  width: 100%;
-  max-width: 700px;
-  height: 5vh;
-  margin: 0px auto;
-  list-style-type: none;
-  overflow: hidden;
+.botao-mobile {
+  border: 2px solid #1572a1;
 }
 
-ul.navbar li a {
-  padding: 14px 16px;
+.custom-toggler .navbar-toggler-icon {
+  background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(21, 114, 161, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: center;
+}
+
+ul.navbar-nav li + li {
+  margin-left: 1em;
+}
+
+ul.navbar-nav li a {
+  padding: .5em 1em;
   color: #04161f;
   font-weight: bold;
   text-decoration: none;
   transition: .3s;
 }
 
-ul.navbar li a:hover {
+ul.navbar-nav li a:hover {
   color: white;
   background-color: #1572a1;
   border-radius: 5px;
@@ -314,10 +316,9 @@ footer {
   margin-bottom: 0.5em;
 }
 
-.grid-footer .logo img {
+.logo-footer img {
   display: block;
   max-width: 180px;
-  height: auto;
 }
 
 .grid-footer ul {
@@ -903,12 +904,60 @@ img.cadastro-logo, img.login-logo {
 }
 
 @media only screen and (min-width: 740px) and (max-width: 979px) {
+  .grid-footer {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-footer img {
+    margin: 1em auto;
+  }
+
+  ul.redes-sociais, ul.pagamentos {
+    justify-content: center;
+  }
+
+  .series {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .livros {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media only screen and (max-width: 739px) {
+  .navbar-nav .nav-link {
+    text-align: center;
+  }
+
+  ul.navbar-nav li + li {
+    margin-left: 0px;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+  }
+
+  .grid-footer {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-footer img {
+    margin: 1em auto;
+  }
+
+  ul.redes-sociais, ul.pagamentos {
+    justify-content: center;
+  }
+
+  .series {
+    grid-template-columns: 1fr;
+  }
+
   .livros {
     grid-template-columns: 1fr;
   }
