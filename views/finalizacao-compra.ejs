@@ -2,86 +2,61 @@
 <%- include('./partials/header') %>
 
     <!-- Conteudo -->
-    <main>
-
-        <div class="primeira">
-            <section>
-                <img id="logo-login" src="./img/logos/logo.login.png" alt="">
-                <p>Identificação</p>
-            </section>
-            <hr size="10" width="100%" align="center" noshade>
-            <form action="">
-                <label for="email">Insira seu e-mail para continuar</label>
-                <input type="email" name="Email" id="user or email" placeholder="example@gmail.com">
-                <a href="./confirmação-de-compra.html"><input type="button" id="proximo" value="Próximo >"></a>
-                <a href="https://www.facebook.com/"><input type="button" id="facebook" value="Conectar com"></a>
-                <a href="https://www.google.com/account"><input type="button" id="google" value="Conectar com"></a>
-                <a href="#"><input type="button" id="cadastrar" value="Cadastrar"></a>
+<main class="container compra-container">
+    <section class="finalizar-compra">
+        <div class="finalizar-item">
+            <div class="finalizar-titulo">
+                <span><i class="fa-solid fa-user"></i></span>
+                <h5>Identificação</h5>
+            </div>
+            <hr>
+            <div class="finalizar-conteudo">
+                <form>
+                    <div>
+                        <label>Login:</label>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <label>Senha:</label>
+                        <input type="password" />
+                    </div>
+                    <button class="btn"><a href="#">Acessar</a></button>
+                </form>
+                <button class="btn btn-facebook">
+                    <a href="/users/googleauth" role="button" style="text-transform:none">
+                        Acessar com
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </button>
+                <button class="btn btn-google">
+                    <a href="/users/googleauth" role="button" style="text-transform:none">
+                        Acessar com
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                </button>
+                <button class="btn btn-cadastrar"><a href="#">Cadastrar</a></button>
+            </div>
         </div>
 
-        <div class="segunda">
-            <section>
-                <img id="logo-login" src="./img/logos/logo.login.png" alt="">
-                <p>Endereço de entrega</p>
-            </section>
-            <hr size="10" width="100%" align="center" noshade>
-            <section id="entrega">
-                <h4>Aguardando identificação</h4>
-                <img src="./img/logos/logo-entrega.png" alt=""><a href="www.google.com">Endereço de entrega</a>
-                <hr size="10" width="100%" align="center" noshade>
-                <h4>Aguardando definição do endereço
-                    de entrega</h4>
-                <img src="./img/logos/logo-pagamento.png" alt=""><a href="www.google.com">Endereço de entrega</a>
-                <hr size="10" width="100%" align="center" noshade>
-                <h4>Preencha os dados de entrega para
-                    prosseguir com o pagamento</h4>
-            </section>
+        <div class="finalizar-item">
+            <div class="finalizar-titulo">
+                <span><i class="fa-solid fa-map-location-dot"></i></span>
+                <h5>Endereço de entrega</h5>
+            </div>
+            <hr>
+            <div class="finalizar-conteudo"></div>
         </div>
 
-        <div class="terceira">
-
-            <section>
-                <img id="logo-login" src="./img/logos/logo-carrinho.png" alt="">
-                <p>Resumo do pedido</p>
-            </section>
-
-            <hr size="10" width="100%" align="center" noshade>
-
-            <section id="pedido">
-                <section id="prod01">
-                </section>
-
-                <section id="info-prod01">
-                    <h5>Título-1</h5>
-                    <h6>R$ 100,00 x1</h6>
-                </section>
-            </section>
-
-            <section id="pedido">
-                <section id="prod02">
-                </section>
-
-                <section id="info-prod02">
-                    <h5>Título-2</h5>
-                    <h6>R$ 100,00 x1</h6>
-                </section>
-            </section>
-
-            <section id="valor">
-                <p>Subtotal</p>
-                <p>Frete</p>
-                <p id="desconto">Desconto</p>
-                <p id="total">Total</p>
-            </section>
-
-            <section id="precos">
-                <p>R$ 160,00</p>
-                <p>R$ 0,00</p>
-                <p>R$ 0,00</p>
-                <p>R$ 0,00</p>
-            </section>
-    </main>
-
+        <div class="finalizar-item">
+            <div class="finalizar-titulo">
+                <span><i class="fa-solid fa-cart-shopping"></i></span>
+                <h5>Resumo do pedido</h5>
+            </div>
+            <hr>
+            <div class="finalizar-conteudo"></div>
+        </div>
+    </section>
+</main>
 
 <!-- Carrinho -->
 <%- include('./partials/carrinho') %>

@@ -102,6 +102,7 @@ header {
   max-width: 980px;
   margin: 0px auto;
 }
+
 .logo {
   max-height: 6vh;
   width: 14vh;
@@ -116,10 +117,12 @@ header {
 .pesquisa {
   padding: 1.5vh;
 }
+
 form {
   height: 100%;
   display: flex;
 }
+
 .pesquisa input {
   border: 0;
   border-radius: 5px;
@@ -129,6 +132,7 @@ form {
   box-shadow: none;
   outline: none;
 }
+
 button.botao-pesquisa {
   border: 0;
   border-radius: 5px;
@@ -139,6 +143,7 @@ button.botao-pesquisa {
   outline: none;
   margin-left: 1vh;
 }
+
 ul.menus-header {
   display: flex;
   list-style-type: none;
@@ -147,6 +152,7 @@ ul.menus-header {
   justify-content: center;
   margin-bottom: 0px;
 }
+
 ul.menus-header li {
   display: flex;
   justify-content: center;
@@ -593,6 +599,133 @@ h2.preco {
   transform: translate3d(-50%, -50%, 0px);
 }
 
+/* COMPRA */
+.compra-container {
+  margin: 2em auto;
+}
+
+.finalizar-compra {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.finalizar-item {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.finalizar-titulo {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.finalizar-titulo span {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efdad7;
+  border-radius: 50%;
+}
+
+.fa-cart-shopping::before, .fa-user::before, .fa-map-location-dot::before {
+  color: #1572a1;
+}
+
+.finalizar-titulo h5 {
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-left: .5em;
+}
+
+.finalizar-item hr {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #efdad7;
+  margin: 0px;
+}
+
+.finalizar-conteudo {
+  padding: 1em;
+}
+
+.finalizar-conteudo form {
+  display: flex;
+  flex-direction: column;
+}
+
+.finalizar-conteudo form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.finalizar-conteudo form > div label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #04161f;
+  margin-bottom: .5em;
+  margin-bottom: .5em;
+}
+
+.finalizar-conteudo form > div input {
+  padding: .5em;
+  border: 2px solid #efdad7;
+  border-radius: 5px;
+}
+
+.finalizar-conteudo form > div input:focus {
+  outline: none;
+}
+
+.finalizar-conteudo button {
+  margin-bottom: 1em;
+}
+
+button.btn-cadastrar {
+  background-color: #efdad7;
+  border: 3px solid #efdad7;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+button.btn-cadastrar:hover {
+  background-color: transparent;
+}
+
+button.btn-cadastrar a {
+  color: #1572a1!important;
+  font-weight: 700;
+}
+
+button.btn-cadastrar:hover a {
+  color: #1572a1 !important;
+}
+
+button.btn-facebook {
+  background-color: #3B5998;
+  border: 3px solid #3B5998;
+}
+
+button.btn-facebook:hover a {
+  color: #3B5998!important;
+}
+
+button.btn-google {
+  background-color: #EA4335;
+  border: 3px solid #EA4335;
+}
+
+button.btn-google:hover a {
+  color: #EA4335!important;
+}
+
 /* PAINEL USUÁRIO */
 
 .grid-painel {
@@ -904,6 +1037,18 @@ img.cadastro-logo, img.login-logo {
 }
 
 @media only screen and (min-width: 740px) and (max-width: 979px) {
+  .navbar-nav .nav-link {
+    text-align: center;
+  }
+
+  ul.navbar-nav li + li {
+    margin-left: 0px;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+  }
+
   .grid-footer {
     grid-template-columns: 1fr;
     justify-content: center;
@@ -924,6 +1069,11 @@ img.cadastro-logo, img.login-logo {
 
   .livros {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .series-img {
+    grid-column: 1 / 3;
+    padding: 2em;
   }
 }
 
