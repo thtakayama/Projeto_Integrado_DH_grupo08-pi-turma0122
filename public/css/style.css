@@ -383,19 +383,10 @@ ul.redes-sociais li:hover a i {
   margin-top: 2em;
 }
 
-.produto-galeria {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.galeria-thumb {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1rem -5px;
-}
-
 .galeria-imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 340px;
   height: 340px;
   overflow: hidden;
@@ -404,17 +395,10 @@ ul.redes-sociais li:hover a i {
 }
 
 .galeria-imagem img {
-  display: flex;
+  display: block;
   position: relative;
   max-width: 300px;
   max-height: 300px;
-}
-
-.galeria-thumb span {
-  background-color: grey;
-  min-width: 50px;
-  min-height: 50px;
-  margin: 5px;
 }
 
 .produto-info {
@@ -1110,5 +1094,9 @@ img.cadastro-logo, img.login-logo {
 
   .livros {
     grid-template-columns: 1fr;
+  }
+
+  .produto {
+    flex-direction: column;
   }
 }

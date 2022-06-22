@@ -1,7 +1,6 @@
 const path = require('path');
 const bcrypt = require('bcrypt');
 const { userInfo } = require('os');
-const { uuid } = require('uuidv4');
 
 let produtos = [];
 
