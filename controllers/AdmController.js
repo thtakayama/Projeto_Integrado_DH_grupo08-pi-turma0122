@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const { userInfo } = require('os');
 const { uuid } = require('uuidv4');
 
-const produtos = [];
+let produtos = [];
 
 module.exports = {
     
@@ -21,6 +21,7 @@ module.exports = {
   acaoCadastrarProduto: (req,res) => {
     const titulo = req.body.titulo; 
     const autor = req.body.autor; 
+    const imagem = req.file.filename;
     const preco = req.body.preco; 
     const descricao = req.body.descricao; 
     const avaliacao = req.body.avaliacao; 
@@ -28,12 +29,17 @@ module.exports = {
     const objProduto = {
       titulo: titulo,
       autor: autor,
+      imagem: imagem,
       preco: preco,
       descricao: descricao,
       avaliacao: avaliacao
     }
     produtos.push(objProduto);
 
+    res.redirect('/adm/produtos');
+  }, 
+  produtosExcluir: (req,res) => {
+    produtos = produtos.filter((produto) => produto.id != req.params.idProduto);
     res.redirect('/adm/produtos');
   }
 }

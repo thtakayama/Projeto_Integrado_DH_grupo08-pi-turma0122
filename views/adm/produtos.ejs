@@ -11,6 +11,7 @@
     <table class="tabela-produtos">
         <thead>
             <tr>
+                <th>Imagem</th>
                 <th>Título</th>
                 <th>Autor</th>
                 <th>Preço</th>
@@ -22,6 +23,7 @@
         <tbody>
             <% for(produto of produtos) { %>
                 <tr>
+                    <td><img src="/uploads/<%= produto.imagem %>" height="100"/></td>
                     <td><%= produto.titulo %></td>
                     <td><%= produto.autor %></td>
                     <td><%= produto.preco %></td>

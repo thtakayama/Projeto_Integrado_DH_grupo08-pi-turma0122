@@ -248,6 +248,10 @@ ul.navbar-nav li a:hover {
 
 /* CARRINHO */
 
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0;
+}
+
 .carrinho-item {
   display: flex;
   justify-content: space-between;
@@ -431,16 +435,15 @@ h2.preco {
   margin-bottom: 2.5em;
 }
 
-.produto-comprar {
-  display: flex;
-}
-
 .produto-comprar ul {
   display: flex;
   list-style: none;
 }
 
 .produto-comprar ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border: 2px solid #efdad7;
@@ -451,7 +454,6 @@ h2.preco {
   color: #04161f;
   font-weight: 700;
   text-align: center;
-  transform: translate3d(0px, 50%, 0px);
 }
 
 .produto-comprar ul li:first-child,
@@ -472,7 +474,6 @@ h2.preco {
   padding: 0.5em 1rem;
   border: 2px solid #1572a1;
   border-radius: 5px;
-  margin-left: 2em;
   transition: 0.3s;
 }
 
@@ -493,23 +494,22 @@ h2.preco {
   margin-top: 1em;
 }
 
-.tab-nav ul {
-  list-style: none;
-  display: flex;
-  border-bottom: 2px solid #9ad0ec;
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #1572a1;
+  background-color: #efdad7;
+  font-weight: bold;
 }
 
-.tab-nav ul li {
-  padding: 0.5em 1em;
-  font-weight: 700;
-  border: 2px solid #9ad0ec;
-  border-bottom: 0px;
-  border-radius: 3px 3px 0px 0px;
-  margin: 0px 10px;
+.nav-pills .nav-link {
+  color: #1572a1;
+  font-weight: bold;
+  border-radius: 0.25em 0.25em 0px 0px;
 }
 
-.tab-nav ul li:first-child {
-  margin-left: 0px;
+.tab .mb-3 {
+  margin-bottom: 0px;
+  border-bottom: 3px solid #efdad7;
+  padding: 0px .5em;
 }
 
 .tab-content {
