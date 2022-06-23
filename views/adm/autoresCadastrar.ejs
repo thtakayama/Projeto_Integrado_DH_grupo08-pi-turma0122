@@ -1,0 +1,31 @@
+<!-- Header -->
+<%- include('../partials/header') %>
+
+<!-- Conteúdo -->
+<section class="container painel-produtos">
+    <h1>Painel Administrativo</h1>
+    <h2>Produtos - Cadastrar</h2>
+
+    <form method="POST" action="/adm/autores/acaoCadastrar" enctype="multipart/form-data">
+        <div>
+            <label>Nome Completo:</label>
+            <input type="text" name="nome" />
+        </div>
+        <div>
+            <label>Descrição:</label>
+            <textarea name="descricao"></textarea>
+        </div>
+        <div>
+            <label>Imagem:</label>
+            <input type="file" name="imagemAutor" />
+        </div>
+
+        <button>Cadastrar</button>
+    </form>
+</section>
+
+<!-- Carrinho -->
+<%- include('../partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('../partials/footer') %>

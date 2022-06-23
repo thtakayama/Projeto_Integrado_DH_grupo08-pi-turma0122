@@ -1,0 +1,41 @@
+<!-- Header -->
+<%- include('../partials/header') %>
+
+<!-- Conteúdo -->
+<section class="container painel-produtos">
+    <h1>Painel Administrativo</h1>
+    <h2>Autores</h2>
+    <a href="/adm/autores/cadastrar" class="btn-adicionar">Adicionar novo</a>
+
+    <!-- Tabela de Produtos -->
+    <table class="tabela-produtos">
+        <thead>
+            <tr>
+                <th>Imagem</th>
+                <th>Nome Completo</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(autor of autores) { %>
+                <tr>
+                    <td><img src="/uploads/<%= autor.imagem %>" height="100"/></td>
+                    <td><%= autor.nome %></td>
+                    <td><%= autor.descricao %></td>
+                    <td>
+                        <div class="acoes">
+                            <a href="/adm/autores/editar/<%= autor.id %>" class="btn-editar">Editar</a>
+                            <a href="/adm/autores/excluir/<%= autor.id %>" class="btn-excluir">Excluir</a>
+                        </div>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</section>
+<!-- Carrinho -->
+<%- include('../partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('../partials/footer') %>

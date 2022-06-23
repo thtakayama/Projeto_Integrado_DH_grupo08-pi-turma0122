@@ -18,7 +18,11 @@ const upload = multer({ storage: storage });
 router.get('/login', AdmController.login);
 router.get('/produtos', AdmController.produtos);
 router.get('/produtos/cadastrar', AdmController.produtosCadastrar);
-router.post('/acao-cadastrar-produtos', upload.single('imagemProduto'), AdmController.acaoCadastrarProduto);
-router.get('/excluir-produtos/:idProduto', AdmController.produtosExcluir);
+router.post('/produtos/acaoCadastrar', upload.single('imagemProduto'), AdmController.acaoCadastrarProduto);
+router.get('/produtos/excluir/:idProduto', AdmController.produtosExcluir);
+router.get('/autores', AdmController.autores);
+router.get('/autores/cadastrar', AdmController.autoresCadastrar);
+router.post('/autores/acaoCadastrar', upload.single('imagemAutor'), AdmController.acaoCadastrarAutor);
+router.get('/autores/excluir/:idAutor', AdmController.autoresExcluir);
 
 module.exports = router;
