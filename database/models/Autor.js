@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let autor = sequelize.define(
+    let Autor = sequelize.define(
         'Autor',
         {
             id: {
@@ -24,5 +24,12 @@ module.exports = (sequelize, DataTypes) => {
         }
     )
 
-    return autor
+    Autor.associate = function(modelos) {
+        Autor.hasMany(modelos.Produto, {
+            as: "produtos",
+            foreignKey: "autores_id"
+        });
+      }
+
+    return Autor
 }

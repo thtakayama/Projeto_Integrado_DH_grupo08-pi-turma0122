@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let produto = sequelize.define(
+    let Produto = sequelize.define(
         'Produto',
         {
             id: {
@@ -37,8 +37,24 @@ module.exports = (sequelize, DataTypes) => {
             tableName: 'produtos',
             timestamps: false,
             freezeTableName: true
-        }
-    )
+        })
 
-    return produto
+        Produto.associate = function(modelos) {
+            Produto.belongsTo(modelos.Autor, {
+              as: "autor",
+              foreignKey: "autores_id"
+            });
+
+            Produto.associate = function(modelos) {
+                Produto.belongsToMany(modelos.Genero, {
+                  as: "generos",
+                  through: "generos_produtos",
+                  foreignKey: "produtos_id",
+                  otherKey: "generos_id",
+                  timestamps: false
+                });
+              }
+          }
+
+    return Produto
 }

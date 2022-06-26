@@ -1,19 +1,16 @@
 var express = require('express');
+const { body, validationResult } = require('express-validator');
 var router = express.Router();
 var IndexController = require('../controllers/IndexController');
 
 /* GET home page. */
 router.get('/', IndexController.home);
 router.get('/login', IndexController.login);
+router.post('/acaoLogin', IndexController.acaoLogin);
 router.get('/produtos', IndexController.produtos);
 router.get('/finalizarCompra', IndexController.finalizarCompra);
 router.get('/produtoInterno', IndexController.produtoInterno);
 router.get('/cadastro', IndexController.cadastrar);
 router.post('/cadastro', IndexController.acaoCadastrar);
-router.get('/painel-usuario', IndexController.painelUsuario);
-// router.get('/painel-usuario-pessoais', IndexController.painelUsuarioPessoais);
-router.get('/painel-usuario-enderecos', IndexController.painelUsuarioEnderecos);
-// router.get('/painel-usuario-configuracoes', IndexController.painelUsuarioConfiguracoes);
-router.get('/painel-usuario-pedidos', IndexController.painelUsuarioPedidos);
 
 module.exports = router;

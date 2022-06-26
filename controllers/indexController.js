@@ -14,6 +14,13 @@ module.exports = {
     res.render('login');
   },
 
+  acaoLogin: (req, res) => {
+    req.session.emailUsuario = "editora@sabia.com.br",
+    req.session.idUsuario = "1"
+
+    res.redirect('produto-interno')
+  },
+
   produtos: (req, res) => {
     res.render('produtos');
   },
@@ -23,7 +30,8 @@ module.exports = {
   },
 
   produtoInterno: (req, res) => {
-    res.render('produto-interno');
+    let emailUsuario = req.session.emailUsuario;
+    res.render('produto-interno', { emailUsuario:emailUsuario });
   },
 
   cadastrar: (req, res) => {
