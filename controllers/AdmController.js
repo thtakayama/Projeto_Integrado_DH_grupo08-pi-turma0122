@@ -3,36 +3,45 @@ const bcrypt = require('bcrypt');
 const { userInfo } = require('os');
 let db = require('../database/models');
 
-//let produtos = [];
+let produtos = [];
 //let autores = [];
-
+ 
 module.exports = {
     
   login: (req, res) => {
     res.render('adm/login')
   },
 
-  produtos: async (req,res) => {
-    const livros = await db.Produto.findAll();
-    res.render('/produtos', {
-      listaLivros: livros
+  produtos: (req,res) => {
+    db.Produto.findAll()
+    .then(function(produtosRetornados) {
+      return res.render('adm/produtos', { produtos: produtosRetornados })
     })
+    .catch((erro) => console.log(erro))
   },
 
   produtosCadastrar: (req,res) => {
-    res.render('adm/produtosCadastrar')
+    db.Autor.findAll()
+      .then(function(autoresRetornados) {
+        res.render('adm/produtosCadastrar', { autores: autoresRetornados })
+      })
+      .catch((erro) => console.log(erro))
   },
 
   acaoCadastrarProduto: (req,res) => {
 
     db.Produto.create({
       titulo: req.body.titulo, 
-      autor: req.body.autor,
-      imagem: req.file.filename,
+      autores_id: req.body.autor,
+      img: req.file.filename,
       preco: req.body.preco,
       descricao: req.body.descricao,
       avaliacao: req.body.avaliacao
-    }).then(() => res.redirect('/'))
+    }).then((produtoRetornado) => {
+      produtos.push(produtoRetornado);
+
+      res.redirect('/');
+    })
       .catch((error) => console.log(error));
 
     /* const titulo = req.body.titulo; 

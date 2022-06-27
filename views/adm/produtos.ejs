@@ -23,9 +23,9 @@
         <tbody>
             <% for(produto of produtos) { %>
                 <tr>
-                    <td><img src="/uploads/<%= produto.imagem %>" height="100"/></td>
+                    <td><img src="/uploads/<%= produto.img %>" height="100"/></td>
                     <td><%= produto.titulo %></td>
-                    <td><%= produto.autor %></td>
+                    <td><%= produto.autores_id %></td>
                     <td><%= produto.preco %></td>
                     <td><%= produto.descricao %></td>
                     <td><%= produto.avaliacao %></td>
