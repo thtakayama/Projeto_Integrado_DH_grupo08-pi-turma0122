@@ -10,7 +10,5 @@ router.post('/acaoLogin', IndexController.acaoLogin);
 router.get('/produtos', IndexController.produtos);
 router.get('/finalizarCompra', IndexController.finalizarCompra);
 router.get('/produtoInterno', IndexController.produtoInterno);
-router.get('/cadastro', IndexController.cadastrar);
-router.post('/cadastro', IndexController.acaoCadastrar);
 
 module.exports = router;

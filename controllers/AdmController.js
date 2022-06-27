@@ -11,15 +11,18 @@ module.exports = {
   login: (req, res) => {
     res.render('adm/login')
   },
+
   produtos: async (req,res) => {
     const livros = await db.Produto.findAll();
     res.render('/produtos', {
       listaLivros: livros
     })
   },
+
   produtosCadastrar: (req,res) => {
     res.render('adm/produtosCadastrar')
   },
+
   acaoCadastrarProduto: (req,res) => {
 
     db.Produto.create({
@@ -50,19 +53,23 @@ module.exports = {
     produtos.push(objProduto);
 
     res.redirect('/adm/produtos'); */
-  }, 
+  },
+
   produtosExcluir: (req,res) => {
     produtos = produtos.filter((produto) => produto.id != req.params.idProduto);
     res.redirect('/adm/produtos');
   },
+
   autores: (req,res) => {
     res.render('adm/autores', {
       autores: autores
     });
   },
+
   autoresCadastrar: (req,res) => {
     res.render('adm/autoresCadastrar')
   },
+
   acaoCadastrarAutor: (req,res) => {
     db.Autor.create({
       nome: req.body.nome,
@@ -70,6 +77,7 @@ module.exports = {
     }).then(() => res.redirect('adm/autores'))
       .catch((error) => console.log(error));
   }, 
+  
   autoresExcluir: (req,res) => {
     autores = autores.filter((autor) => autor.id != req.params.idAutor);
     res.redirect('/adm/autores');
