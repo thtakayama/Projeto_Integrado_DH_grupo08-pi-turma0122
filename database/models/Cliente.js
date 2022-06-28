@@ -30,8 +30,21 @@ module.exports = (sequelize, DataTypes) => {
             tableName: 'clientes',
             timestamps: false,
             freezeTableName: true
+        })
+
+        cliente.associate = function (modelos) {
+            cliente.hasMany(modelos.Endereco, {
+                as: "enderecos",
+                foreignKey: "clientes_id"
+            }
+            );
+            cliente.hasMany(modelos.Pedido, {
+                as: "pedidos",
+                foreignKey: "clientes_id"
+            }
+            );    
         }
-    )
 
     return cliente
+
 }

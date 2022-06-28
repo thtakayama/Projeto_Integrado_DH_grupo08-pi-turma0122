@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let Genero = sequelize.define(
+    let genero = sequelize.define(
       'Genero',
       {
         id: {
@@ -20,8 +20,8 @@ module.exports = (sequelize, DataTypes) => {
       }
     )
 
-    Genero.associate = function(modelos) {
-      Genero.belongsToMany(modelos.Produto, {
+    genero.associate = function(modelos) {
+      genero.belongsToMany(modelos.Produto, {
         as: "produtos",
         through: "generos_produtos",
         foreignKey: "generos_id",
@@ -30,5 +30,5 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
   
-    return Genero
+    return genero;
   }
