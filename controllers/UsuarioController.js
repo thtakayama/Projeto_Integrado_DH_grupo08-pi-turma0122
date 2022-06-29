@@ -8,8 +8,11 @@ module.exports = {
     res.render('login');
   },
 
-  painel: (req, res) => {
-    res.render('painel-usuario');
+  acaoLogin: (req, res) => {
+    req.session.emailUsuario = "editora@sabia.com.br",
+      req.session.idUsuario = "1"
+
+    res.redirect('produto-interno')
   },
 
   cadastrar: (req, res) => {
@@ -17,23 +20,35 @@ module.exports = {
   },
 
   acaoCadastrar: async (req, res) => {
-    const resultadosValidacoes = validationResult(req);
 
-    if (resultadosValidacoes.errors.length > 0) {
-      return res.render('cadastro', {
-        errors: resultadosValidacoes.mapped(),
-        oldData: req.body
+      let errors = validationResult(req)
+      let emailCadastrado = await Cliente.findAll({
+        where: {
+          email: req.body.email
+        }
       })
-    } else {
-      let cpf = "";
-      let { nome, email, senha } = req.body;
-      const hash = bcrypt.hashSync(senha, 10);
-      let novoCliente = await Cliente.create(
-        { nome, email, senha: hash, cpf }
-      )
-      res.redirect('painel-usuario');
-    }
-  },
+
+      if(emailCadastrado[0] != undefined) {
+        return res.render("cadastro", { old: req.body, errors: {email: {msg: "E-mail já cadastrado"}}});
+      }
+  
+      if (errors.isEmpty()) {
+  
+        let { nome, email, senha, cpf} = req.body;
+        const hash = bcrypt.hashSync(senha, 10)
+        let novoUsuario = await Cliente.create(
+          { nome, email, senha: hash, cpf}
+        ).catch(err => console.log(err))
+  
+        res.render("painel-usuario");
+      } else {
+        res.render("cadastro", { errors: errors.mapped(), old: req.body });
+      }
+    },
+
+  painel: (req, res) => {
+    res.render('painel-usuario');
+  }
 
 }
 

@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
                 unique: true
             },
             cpf: {
-                type: DataTypes.STRING(13),
+                type: DataTypes.CHAR(13),
                 allowNull: false
             },
             senha: {

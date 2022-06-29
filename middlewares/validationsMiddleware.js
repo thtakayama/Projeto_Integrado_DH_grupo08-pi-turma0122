@@ -5,6 +5,8 @@ module.exports = [
     check('nome')
         .notEmpty().withMessage('Preencher o campo nome').bail()
         .trim(),
+    check('cpf')
+        .notEmpty().withMessage('Preencher o campo CPF').bail(),
     check('email')
         .notEmpty().withMessage('Preencher o campo e-mail').bail()
         .trim().bail()
