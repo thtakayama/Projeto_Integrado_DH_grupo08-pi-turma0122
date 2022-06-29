@@ -43,25 +43,6 @@ module.exports = {
       res.redirect('/');
     })
       .catch((error) => console.log(error));
-
-    /* const titulo = req.body.titulo; 
-    const autor = req.body.autor; 
-    const imagem = req.file.filename;
-    const preco = req.body.preco; 
-    const descricao = req.body.descricao; 
-    const avaliacao = req.body.avaliacao; 
-
-    const objProduto = {
-      titulo: titulo,
-      autor: autor,
-      imagem: imagem,
-      preco: preco,
-      descricao: descricao,
-      avaliacao: avaliacao
-    }
-    produtos.push(objProduto);
-
-    res.redirect('/adm/produtos'); */
   },
 
   produtosExcluir: (req,res) => {
@@ -70,9 +51,10 @@ module.exports = {
   },
 
   autores: (req,res) => {
-    res.render('adm/autores', {
-      autores: autores
-    });
+    db.Autor.findAll()
+    .then(function(autoresRetornados){
+      return res.render('adm/autores', { autores: autoresRetornados } )
+    })
   },
 
   autoresCadastrar: (req,res) => {

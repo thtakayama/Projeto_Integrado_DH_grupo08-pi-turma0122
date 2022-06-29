@@ -12,7 +12,7 @@ router.post('/produtos/acaoCadastrar', upload.single('imagemProduto'), AdmContro
 router.get('/produtos/excluir/:idProduto', AdmController.produtosExcluir);
 router.get('/autores', AdmController.autores);
 router.get('/autores/cadastrar', AdmController.autoresCadastrar);
-router.post('/autores/acaoCadastrar', upload.single('imagemAutor'), AdmController.acaoCadastrarAutor);
+router.post('/autores/acaoCadastrar', AdmController.acaoCadastrarAutor);
 router.get('/autores/excluir/:idAutor', AdmController.autoresExcluir);
 
 module.exports = router;

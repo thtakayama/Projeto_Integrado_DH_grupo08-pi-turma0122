@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false
             },
             preco: {
-                type: DataTypes.FLOAT,
+                type: DataTypes.DECIMAL(19,2),
                 allowNull: false,
             },
             avaliacao: {

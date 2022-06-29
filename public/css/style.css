@@ -893,6 +893,11 @@ table.tabela-produtos thead th {
   margin: .5em 1em;
 }
 
+.acoes a {
+  display: block;
+  margin-bottom: 1em;
+}
+
 .painel-produtos form {
   display: block;
   position: relative;
