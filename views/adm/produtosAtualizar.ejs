@@ -37,28 +37,8 @@
             <label>Imagem:</label>
             <input type="file" name="imagemProduto" />
         </div>
-        <div>
-            <label>Tipo:</label>
-            <select type="text" name="tipo">
-                <% for(let i = 0; i < tipo.length; i++) { %>
-                    <option value="<%= tipo[i].id %>">
-                        <%= tipo[i].nome %>
-                    </option>
-                <% } %>
-            </select>
-        </div>
-        <div>
-            <label>Genêro:</label>
-            <select type="text" name="generos">
-                <% for(let i = 0; i < generos.length; i++) { %>
-                    <option value="<%= generos[i].id %>">
-                        <%= generos[i].nome %>
-                    </option>
-                <% } %>
-            </select>
-        </div>
 
-        <button>Cadastrar</button>
+        <button>Salvar</button>
     </form>
 </section>
 

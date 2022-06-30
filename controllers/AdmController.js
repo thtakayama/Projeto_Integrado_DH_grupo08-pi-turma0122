@@ -4,7 +4,7 @@ const { userInfo } = require('os');
 let db = require('../database/models');
 
 let produtos = [];
-//let autores = [];
+let autores = [];
  
 module.exports = {
     
@@ -13,19 +13,23 @@ module.exports = {
   },
 
   produtos: (req,res) => {
-    db.Produto.findAll()
+    db.Produto.findAll({
+      include: [
+        {association: 'autores'},
+        {association: 'tipo'}
+      ]
+    })
     .then(function(produtosRetornados) {
       return res.render('adm/produtos', { produtos: produtosRetornados })
     })
     .catch((erro) => console.log(erro))
   },
 
-  produtosCadastrar: (req,res) => {
-    db.Autor.findAll()
-      .then(function(autoresRetornados) {
-        res.render('adm/produtosCadastrar', { autores: autoresRetornados })
-      })
-      .catch((erro) => console.log(erro))
+  produtosCadastrar: async (req,res) => {
+    let autoresRetornados = await db.Autor.findAll();
+    let tipoRetornados = await db.Tipo.findAll();
+    let generosRetornados = await db.Genero.findAll();
+    res.render('adm/produtosCadastrar', { autores: autoresRetornados, tipo: tipoRetornados, generos: generosRetornados })
   },
 
   acaoCadastrarProduto: (req,res) => {
@@ -36,11 +40,13 @@ module.exports = {
       img: req.file.filename,
       preco: req.body.preco,
       descricao: req.body.descricao,
-      avaliacao: req.body.avaliacao
+      avaliacao: req.body.avaliacao,
+      tipo_id: req.body.tipo,
+      generos_id: req.body.generos
     }).then((produtoRetornado) => {
       produtos.push(produtoRetornado);
 
-      res.redirect('/');
+      res.redirect('/adm/produtos');
     })
       .catch((error) => console.log(error));
   },
@@ -65,7 +71,11 @@ module.exports = {
     db.Autor.create({
       nome: req.body.nome,
       biografia: req.body.biografia
-    }).then(() => res.redirect('adm/autores'))
+    }).then((autorRetornado) => {
+      autores.push(autorRetornado);
+
+      res.redirect('/');
+    })
       .catch((error) => console.log(error));
   }, 
   

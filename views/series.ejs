@@ -1,0 +1,25 @@
+<!-- Header -->
+<%- include('./partials/header') %>
+
+<!-- Conteúdo -->
+    <main>
+    <div>
+      <section class="produtos container">
+        <div class="livros">
+            <% for(produto of produtos) { %>
+            <div class="livros-item">
+                <img src="/uploads/<%= produto.img %>">
+                <h4><%= produto.titulo %></h4>
+                <h4 class="preco">R$ <%= produto.preco %></h4>
+                <button><a href="/series/<%= produto.id %>">Comprar</a></button>
+            </div>
+            <% } %>
+        </div>
+    </section>
+    </main>
+
+<!-- Carrinho -->
+<%- include('./partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('./partials/footer') %>

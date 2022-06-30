@@ -17,6 +17,8 @@
                 <th>Preço</th>
                 <th>Descrição</th>
                 <th>Avaliação</th>
+                <th>Tipo</th>
+                <th>Genêro</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -25,10 +27,12 @@
                 <tr>
                     <td><img src="/uploads/<%= produto.img %>" height="100"/></td>
                     <td><%= produto.titulo %></td>
-                    <td><%= produto.autores_id %></td>
+                    <td><%= produto.autores.nome %></td>
                     <td><%= produto.preco %></td>
                     <td><%= produto.descricao %></td>
                     <td><%= produto.avaliacao %></td>
+                    <td><%= produto.tipo %></td>
+                    <td><%= produto.generos_id %></td>
                     <td>
                         <div class="acoes">
                             <a href="/adm/produtos/editar/<%= produto.id %>" class="btn-editar">Editar</a>

@@ -7,6 +7,7 @@ const upload = require('../middlewares/multerMiddleware');
 
 router.get('/login', AdmController.login);
 router.get('/produtos', AdmController.produtos);
+//Criar/Cadastrar produto
 router.get('/produtos/cadastrar', AdmController.produtosCadastrar);
 router.post('/produtos/acaoCadastrar', upload.single('imagemProduto'), AdmController.acaoCadastrarProduto);
 router.get('/produtos/excluir/:idProduto', AdmController.produtosExcluir);

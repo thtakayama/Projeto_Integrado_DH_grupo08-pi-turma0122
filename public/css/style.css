@@ -536,11 +536,13 @@ h2.preco {
 .livros-item h4 {
   font-weight: 700;
   margin-top: .5em;
+  min-height: 70px;
 }
 
 .livros-item h4.preco {
   color: #1572a1;
   margin: 0.5em 0px 1em 0px;
+  min-height: auto;
 }
 
 .livros-item button {

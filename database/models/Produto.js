@@ -31,6 +31,14 @@ module.exports = (sequelize, DataTypes) => {
             autores_id: {
                 type: DataTypes.INTEGER,
                 allowNull: false
+            },
+            tipo_id: {
+                type: DataTypes.INTEGER,
+                allowNull: false
+            },
+            generos_id: {
+                type: DataTypes.INTEGER,
+                allowNull: false
             }
         },
         {
@@ -41,8 +49,13 @@ module.exports = (sequelize, DataTypes) => {
 
     produto.associate = function (modelos) {
         produto.belongsTo(modelos.Autor, {
-            as: "autor",
+            as: "autores",
             foreignKey: "autores_id"
+        }
+        ),
+        produto.belongsTo(modelos.Tipo, {
+            as: "tipo",
+            foreignKey: "tipo_id"
         }
         ),
         produto.belongsToMany(modelos.Genero, {
