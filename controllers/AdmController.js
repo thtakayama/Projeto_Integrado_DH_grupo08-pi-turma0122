@@ -71,10 +71,8 @@ module.exports = {
     db.Autor.create({
       nome: req.body.nome,
       biografia: req.body.biografia
-    }).then((autorRetornado) => {
-      autores.push(autorRetornado);
-
-      res.redirect('/');
+    }).then(() => {
+      res.redirect('/adm/autores');
     })
       .catch((error) => console.log(error));
   }, 
