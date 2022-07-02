@@ -200,5 +200,53 @@ module.exports = {
     }).then(() => {
       res.redirect('/adm/tipos')
     }).catch((erro) => console.log(erro));
+  },
+
+  categorias: (req,res) => {
+    db.Genero.findAll()
+      .then((generosRetornados) => {
+        res.render('adm/categorias', {generos: generosRetornados});
+      }).catch((erro) => console.log(erro));
+  },
+
+  categoriaCadastrar: (req,res) => {
+    res.render('adm/categoriaCadastrar');
+  },
+
+  acaoCategoriaCadastrar: (req,res) => {
+    db.Genero.create({
+      nome: req.body.nome
+    }).then(() => {
+      res.redirect('/adm/categorias');
+    }).catch((erro) => console.log(erro))
+  },
+
+  categoriaEditar: async (req,res) => {
+    let categoriaId = req.params.id;
+    let categoriaRetornado = await db.Genero.findByPk(categoriaId);
+
+    res.render('adm/categoriaEditar', { genero: categoriaRetornado });
+  },
+
+  acaoCategoriaEditar: (req,res) => {
+    db.Genero.update({
+      nome: req.body.nome,
+    }, {
+      where: { 
+        id: req.params.id
+      }
+    }).then(() => {
+      res.redirect('/adm/categorias')
+    }).catch((erro) => console.log(erro));
+  },
+
+  categoriaExcluir: (req,res) => {
+    db.Genero.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(() => {
+      res.redirect('/adm/categorias')
+    }).catch((erro) => console.log(erro));
   }
 }

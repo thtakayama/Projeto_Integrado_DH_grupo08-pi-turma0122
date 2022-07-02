@@ -39,4 +39,16 @@ router.post('/tipos/acaoEditar/:id', AdmController.acaoEditarTipo);
 //Excluir tipo
 router.post('/tipos/excluir/:id', AdmController.excluirTipo);
 
+//CATEGORIAS
+//Criar/Cadastrar Categoria
+router.get('/categorias', AdmController.categorias);
+//Cadastrar categoria
+router.get('/categorias/cadastrar', AdmController.categoriaCadastrar);
+router.post('/categorias/acaoCadastrar', AdmController.acaoCategoriaCadastrar);
+//Editar Categoria
+router.get('/categorias/editar/:id', AdmController.categoriaEditar);
+router.post('/categorias/acaoEditar/:id', AdmController.acaoCategoriaEditar);
+//Excluir Categoria
+router.post('/categorias/excluir/:id', AdmController.categoriaExcluir);
+
 module.exports = router;
