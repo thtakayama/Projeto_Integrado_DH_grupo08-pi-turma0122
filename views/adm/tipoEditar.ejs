@@ -1,0 +1,23 @@
+<!-- Header -->
+<%- include('../partials/header') %>
+
+<!-- Conteúdo -->
+<section class="container painel-produtos">
+    <h1>Painel Administrativo</h1>
+    <h2>Tipo - Cadastrar</h2>
+
+    <form method="POST" action="/adm/tipos/acaoEditar/<%= tipo.id %>">
+        <div>
+            <label>Nome:</label>
+            <input type="text" name="nome" value="<%= tipo.nome %>" />
+        </div>
+
+        <button>Salvar</button>
+    </form>
+</section>
+
+<!-- Carrinho -->
+<%- include('../partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('../partials/footer') %>

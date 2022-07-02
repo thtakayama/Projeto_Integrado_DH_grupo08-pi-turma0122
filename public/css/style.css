@@ -835,8 +835,8 @@ form.usuario-editar input {
 }
 
 /* PAINEL ADMINISTRATIVO */
-a.btn-adicionar, a.btn-editar, .painel-produtos form button {
-  color: white !important;
+a.btn-adicionar, .btn-editar, .painel-produtos form button {
+  color: white;
   font-weight: 700;
   background-color: #1572a1;
   border: 3px solid #1572a1;
@@ -846,25 +846,25 @@ a.btn-adicionar, a.btn-editar, .painel-produtos form button {
   transition: 0.3s;
 }
 
-a.btn-adicionar:hover, a.btn-editar:hover, .painel-produtos form button:hover {
-  color: #1572a1 !important;
+a.btn-adicionar:hover, button.btn-editar:hover, .painel-produtos form button:hover {
+  color: #1572a1;
   background-color: white;
 }
 
-a.btn-excluir {
+button.btn-excluir {
   color: white !important;
   font-weight: 700;
-  background-color: red;
-  border: 3px solid red;
+  background-color: red!important;
+  border: 3px solid red!important;
   padding: 0.5em 1em;
   border-radius: 3px;
   width: 100%;
   transition: 0.3s;
 }
 
-a.btn-excluir:hover {
+button.btn-excluir:hover {
   color: red !important;
-  background-color: white;
+  background-color: white!important;
 }
 
 .painel-produtos h1 {
@@ -889,15 +889,6 @@ table.tabela-produtos th, table.tabela-produtos td {
 
 table.tabela-produtos thead th {
   text-align: center;
-}
-
-.acoes {
-  margin: .5em 1em;
-}
-
-.acoes a {
-  display: block;
-  margin-bottom: 1em;
 }
 
 .painel-produtos form {
@@ -938,6 +929,23 @@ table.tabela-produtos thead th {
 .painel-produtos form button {
   width: auto;
   float: right;
+}
+
+td.acoes {
+  width: 60px;
+}
+
+.acoes form {
+  margin-bottom: 0px;
+}
+
+.acoes form button {
+  width: 100%;
+  float: none;
+}
+
+.acoes form + form {
+  margin-top: 1em;
 }
 
 /* CADASTRO  E LOGIN */

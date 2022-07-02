@@ -31,13 +31,11 @@
                     <td><%= produto.preco %></td>
                     <td><%= produto.descricao %></td>
                     <td><%= produto.avaliacao %></td>
-                    <td><%= produto.tipo_id %></td>
+                    <td><%= produto.tipo.nome %></td>
                     <td><%= produto.generos_id %></td>
-                    <td>
-                        <div class="acoes">
-                            <a href="/adm/produtos/editar/<%= produto.id %>" class="btn-editar">Editar</a>
-                            <a href="/adm/produtos/excluir/<%= produto.id %>" class="btn-excluir">Excluir</a>
-                        </div>
+                    <td class="acoes">
+                        <form action="/adm/produtos/editar/<%= produto.id %>"><button class="btn-editar">Editar</button></form>
+                        <form action="/adm/produtos/excluir/<%= produto.id %>" method="POST"><button class="btn-excluir">Excluir</button></form>
                     </td>
                 </tr>
             <% } %>

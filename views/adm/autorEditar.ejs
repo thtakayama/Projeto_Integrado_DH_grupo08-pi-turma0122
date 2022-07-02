@@ -1,0 +1,27 @@
+<!-- Header -->
+<%- include('../partials/header') %>
+
+<!-- Conteúdo -->
+<section class="container painel-produtos">
+    <h1>Painel Administrativo</h1>
+    <h2>Autor - Cadastrar</h2>
+
+    <form method="POST" action="/adm/autores/acaoEditar/<%= autor.id %>">
+        <div>
+            <label>Nome Completo:</label>
+            <input type="text" name="nome" value="<%= autor.nome %>" />
+        </div>
+        <div>
+            <label>Biografia:</label>
+            <textarea name="biografia"><%= autor.biografia %></textarea>
+        </div>
+
+        <button>Salvar</button>
+    </form>
+</section>
+
+<!-- Carrinho -->
+<%- include('../partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('../partials/footer') %>

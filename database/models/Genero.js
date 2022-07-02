@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     genero.associate = function(modelos) {
       genero.belongsToMany(modelos.Produto, {
         as: "produtos",
-        through: "generos_produtos",
+        through: "genero_has_produto",
         foreignKey: "generos_id",
         otherKey: "produtos_id",
         timestamps: false

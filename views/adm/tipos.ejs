@@ -4,26 +4,24 @@
 <!-- Conteúdo -->
 <section class="container painel-produtos">
     <h1>Painel Administrativo</h1>
-    <h2>Autores</h2>
-    <a href="/adm/autores/cadastrar" class="btn-adicionar">Adicionar novo</a>
+    <h2>Tipos</h2>
+    <a href="/adm/tipos/cadastrar" class="btn-adicionar">Adicionar novo</a>
 
     <!-- Tabela de Produtos -->
     <table class="tabela-produtos">
         <thead>
             <tr>
-                <th>Nome Completo</th>
-                <th>Biografia</th>
+                <th>Nome</th>
                 <th>Ações</th>
             </tr>
         </thead>
         <tbody>
-            <% for(autor of autores) { %>
+            <% for(tipo of tipos) { %>
                 <tr>
-                    <td><%= autor.nome %></td>
-                    <td><%= autor.biografia %></td>
+                    <td><%= tipo.nome %></td>
                     <td class="acoes">
-                        <form action="/adm/autores/editar/<%= autor.id %>"><button class="btn-editar">Editar</button></form>
-                        <form action="/adm/autores/excluir/<%= autor.id %>" method="POST"><button class="btn-excluir">Excluir</button></form>
+                        <form action="/adm/tipos/editar/<%= tipo.id %>"><button class="btn-editar">Editar</button></form>
+                        <form action="/adm/tipos/excluir/<%= tipo.id %>" method="POST"><button class="btn-excluir">Excluir</button></form>
                     </td>
                 </tr>
             <% } %>

@@ -27,7 +27,11 @@ module.exports = {
   },
 
   series: (req, res) => {
-    db.Produto.findAll()
+    db.Produto.findAll({
+      where: {
+        tipo_id: 2
+      }
+    })
       .then((produtosRetornados) => {
         return res.render('series', {produtos: produtosRetornados})
       })
