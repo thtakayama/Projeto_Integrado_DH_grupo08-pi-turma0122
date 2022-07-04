@@ -1,0 +1,91 @@
+<!-- Header -->
+<%- include('./partials/header') %>
+
+<!-- Conteúdo -->
+    <!--Breadcrumb-->
+    <div></div>
+    <!-- Produto -->
+    <section class="produto container">
+        <!--Imagens-->
+        <div class="galeria-imagem">
+            <img src="/uploads/<%= produto.img %>">
+        </div>
+        <!--Informações produto-->
+        <div class="produto-info">
+            <h2><%= produto.titulo %></h2>
+            <h6><%= produto.autores.nome %></h6>
+            <h2 class="preco">R$ <%= produto.preco %></h2>
+            <div class="produto-comprar">
+                <ul>
+                    <li><a>-</a></li>
+                    <li><a>1</a></li>
+                    <li><a>+</a></li>
+                </ul>
+                <button><a>Comprar</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!--Resumos-->
+    <section class="tab container">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-descricao-tab" data-bs-toggle="pill" data-bs-target="#pills-descricao" type="button" role="tab" aria-controls="pills-descricao" aria-selected="true">Descrição</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-autor-tab" data-bs-toggle="pill" data-bs-target="#pills-autor" type="button" role="tab" aria-controls="pills-autor" aria-selected="false">Autor</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-avaliacoes-tab" data-bs-toggle="pill" data-bs-target="#pills-avaliacoes" type="button" role="tab" aria-controls="pills-avaliacoes" aria-selected="false">Avaliações</button>
+            </li>
+          </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-descricao" role="tabpanel" aria-labelledby="pills-descricao-tab" tabindex="0">
+                <p><%= produto.descricao %></p>
+            </div>
+            <div class="tab-pane fade" id="pills-autor" role="tabpanel" aria-labelledby="pills-autor-tab" tabindex="0">
+                <h3><%= produto.autores.nome%></h3>
+                <p><%= produto.autores.biografia %></p>
+            </div>
+            <div class="tab-pane fade" id="pills-avaliacoes" role="tabpanel" aria-labelledby="pills-avaliacoes-tab" tabindex="0">
+                <h1><%= produto.avaliacao %></h1>
+            </div>
+        </div>
+    </section>
+
+    <!--recomendações-->
+    <section class="recomendacoes container">
+        <h3 class="titulo">Você também pode gostar:</h3>
+        <div class="livros">
+            <div class="livros-item">
+                <img src="/img/brasileira/essa-gente.webp">
+                <h4>Título livro</h4>
+                <h4 class="preco">R$ 24,90</h4>
+                <button><a>Comprar</a></button>
+            </div>
+            <div class="livros-item">
+                <img src="/img/estrangeira/e-nao-sobrou-nenhum.webp">
+                <h4>Título livro</h4>
+                <h4 class="preco">R$ 24,90</h4>
+                <button><a>Comprar</a></button>
+            </div>
+            <div class="livros-item">
+                <img src="/img/estrangeira/o-medico-e-o-monstro.webp">
+                <h4>Título livro</h4>
+                <h4 class="preco">R$ 24,90</h4>
+                <button><a>Comprar</a></button>
+            </div>
+            <div class="livros-item">
+                <img src="/img/brasileira/triste-fim-de-policarpo-quaresma.webp">
+                <h4>Título livro</h4>
+                <h4 class="preco">R$ 24,90</h4>
+                <button><a>Comprar</a></button>
+            </div>
+        </div>
+    </section>
+
+<!-- Carrinho -->
+<%- include('./partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('./partials/footer') %>
