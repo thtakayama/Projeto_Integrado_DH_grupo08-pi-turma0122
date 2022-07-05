@@ -6,10 +6,8 @@ var IndexController = require('../controllers/IndexController');
 /* GET home page. */
 router.get('/', IndexController.home);
 router.get('/produtos', IndexController.produtos);
-router.get('/livros', IndexController.livros);
 router.get('/series', IndexController.series);
-router.get('/ebooks', IndexController.ebooks);
-router.get('/produtos/:id', IndexController.produtoDetalhe);
+router.get('/series/:id', IndexController.serieDetalhe);
 router.get('/finalizarCompra', IndexController.finalizarCompra);
 router.get('/produtoInterno', IndexController.produtoInterno);
 

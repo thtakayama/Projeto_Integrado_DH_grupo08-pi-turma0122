@@ -15,18 +15,6 @@ module.exports = {
     res.render('produtos');
   },
 
-  livros: (req, res) => {
-    db.Produto.findAll({
-      where: {
-        tipo_id: 1
-      }
-    })
-      .then((produtosRetornados) => {
-        return res.render('livros', {produtos: produtosRetornados})
-      })
-      .catch((error) => console.log(error));
-  },
-
   series: (req, res) => {
     db.Produto.findAll({
       where: {
@@ -39,26 +27,14 @@ module.exports = {
       .catch((error) => console.log(error));
   },
 
-  ebooks: (req, res) => {
-    db.Produto.findAll({
-      where: {
-        tipo_id: 3
-      }
-    })
-      .then((produtosRetornados) => {
-        return res.render('ebooks', {produtos: produtosRetornados})
-      })
-      .catch((error) => console.log(error));
-  },
-
-  produtoDetalhe: (req, res) => {
+  serieDetalhe: (req, res) => {
     db.Produto.findByPk(req.params.id, {
       include: [
         {association: 'autores'}
       ]
     })
-      .then((produtoDetalhe) => {
-        return res.render('produto-detalhe', {produto: produtoDetalhe})
+      .then((serieDetalhe) => {
+        return res.render('serie-detalhe', {serie: serieDetalhe})
       })
       .catch((error) => console.log(error));
   },
