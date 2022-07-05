@@ -7,7 +7,7 @@ const validacoes = require('../middlewares/validationsMiddleware');
 const upload = require('../middlewares/multerMiddleware');
 
 router.get('/login', UsuarioController.login);
-router.post('/acaoLogin', UsuarioController.acaoLogin);
+router.post('/login', UsuarioController.acaoLogin);
 router.get('/cadastro', UsuarioController.cadastrar);
 router.post('/cadastro', validacoes , UsuarioController.acaoCadastrar);
 router.get('/painel', UsuarioController.painel);

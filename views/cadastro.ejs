@@ -10,24 +10,24 @@
             <h3>Criar conta</h3>
             <form action="/usuario/cadastro" method="POST">
                 <label>Nome Completo:</label>
-                <input name="nome" id="nome" value="<%= locals.oldData ? oldData.nome : null %>">
+                <input type="text" name="nome" id="nome" value="<%= locals.oldData ? oldData.nome : null %>">
                 <% if(locals.errors && errors.nome) { %>
                 <div class="danger"><%= errors.nome.msg %></div>
                 <% } %>
                 <label>CPF:</label>
-                <input name="cpf" id="cpf">
+                <input type="text" name="cpf" id="cpf">
                 <% if(locals.errors && errors.cpf) { %>
-                    <div class="danger"><%= errors.cpf.msg %></div>
+                <div class="danger"><%= errors.cpf.msg %></div>
                 <% } %>
                 <label>E-mail:</label>
-                <input name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
+                <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
                 <% if(locals.errors && errors.email) { %>
-                    <div class="danger"><%= errors.email.msg %></div>
+                <div class="danger"><%= errors.email.msg %></div>
                 <% } %>
                 <label>Senha:</label>
-                <input name="senha" id="senha" value="<%= locals.oldData ? oldData.senha : null %>">
+                <input type="password" name="senha" id="senha" value="<%= locals.oldData ? oldData.senha : null %>">
                 <% if(locals.errors && errors.senha) { %>
-                    <div class="danger"><%= errors.senha.msg %></div>
+                <div class="danger"><%= errors.senha.msg %></div>
                 <% } %>
                 <button class="btn"><a>Criar conta</a></button>
             </form>

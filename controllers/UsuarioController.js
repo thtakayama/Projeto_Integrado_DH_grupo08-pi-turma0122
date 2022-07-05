@@ -9,10 +9,10 @@ module.exports = {
   },
 
   acaoLogin: (req, res) => {
-    req.session.emailUsuario = "editora@sabia.com.br",
-      req.session.idUsuario = "1"
+    let { email, senha } = req.body;
 
-    res.redirect('produto-interno')
+    console.log(req.body);
+
   },
 
   cadastrar: (req, res) => {
@@ -41,6 +41,7 @@ module.exports = {
         ).catch(err => console.log(err))
   
         res.render("painel-usuario");
+
       } else {
         res.render("cadastro", { errors: errors.mapped(), old: req.body });
       }
