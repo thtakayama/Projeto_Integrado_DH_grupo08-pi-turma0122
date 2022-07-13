@@ -6,8 +6,11 @@ var IndexController = require('../controllers/IndexController');
 /* GET home page. */
 router.get('/', IndexController.home);
 router.get('/produtos', IndexController.produtos);
+router.get('/livros', IndexController.livros);
+router.get('/ebooks', IndexController.ebooks);
 router.get('/series', IndexController.series);
-router.get('/series/:id', IndexController.serieDetalhe);
+router.get('/produtos/:id', IndexController.produtoDetalhe);
+//router.post('/carrinho/acaoComprar/:id', IndexController.acaoComprar);
 router.get('/finalizarCompra', IndexController.finalizarCompra);
 router.get('/produtoInterno', IndexController.produtoInterno);
 

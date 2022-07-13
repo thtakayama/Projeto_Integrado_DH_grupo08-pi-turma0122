@@ -31,6 +31,8 @@ module.exports = {
 
   acaoCadastrarProduto: (req,res) => {
     db.Produto.create({
+      titulo: req.body.titulo,
+      autores_id: req.body.autor,
       img: req.file.filename,
       preco: req.body.preco,
       descricao: req.body.descricao,
@@ -107,7 +109,7 @@ module.exports = {
     db.Autor.create({
       nome: req.body.nome,
       biografia: req.body.biografia
-    }).then(() => res.redirect('adm/autores'))
+    }).then(() => res.redirect('/adm/autores'))
       .catch((error) => console.log(error));
   }, 
   
