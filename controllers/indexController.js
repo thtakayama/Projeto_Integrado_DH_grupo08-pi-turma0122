@@ -15,6 +15,19 @@ module.exports = {
     res.render('produtos');
   },
 
+  lancamentos: (req, res) => {
+    db.Produto.findAll({
+      order: [
+        ['id', 'DESC']
+      ],
+      limit: 12
+    })
+      .then((produtosRetornados) => {
+        return res.render('livros', {produtos: produtosRetornados})
+      })
+      .catch((error) => console.log(error));
+  },
+
   livros: (req, res) => {
     db.Produto.findAll({
       where: {
@@ -73,6 +86,14 @@ module.exports = {
 
   finalizarCompra: (req, res) => {
     res.render('finalizacao-compra');
+  },
+
+  finalizarCompraLogin: (req, res) => {
+    res.render('finalizacao-compra-login');
+  },
+
+  finalizarCompraEndereco: (req, res) => {
+    res.render('finalizacao-compra-endereco');
   },
 
   produtoInterno: (req, res) => {

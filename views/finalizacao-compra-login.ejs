@@ -1,0 +1,58 @@
+<!-- Header -->
+<%- include('./partials/header') %>
+
+    <!-- Conteudo -->
+<main class="container compra-container">
+    <section class="finalizar-compra">
+        <div class="finalizar-item">
+            <div class="finalizar-titulo">
+                <span><i class="fa-solid fa-user"></i></span>
+                <h5>Identificação</h5>
+            </div>
+            <hr>
+            <div class="finalizar-conteudo">
+                <form>
+                    <div>
+                        <label>Login:</label>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <label>Senha:</label>
+                        <input type="password" />
+                    </div>
+                    <button class="btn"><a href="#">Acessar</a></button>
+                </form>
+                <div class="finalizar-redes">
+                    <button class="btn btn-facebook">
+                        <a href="/users/googleauth" role="button" style="text-transform:none">
+                            Acessar com
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </button>
+                    <button class="btn btn-google">
+                        <a href="/users/googleauth" role="button" style="text-transform:none">
+                            Acessar com
+                            <i class="fa-brands fa-google"></i>
+                        </a>
+                    </button>
+                </div>
+                <button class="btn btn-cadastrar"><a href="#">Cadastrar</a></button>
+            </div>
+        </div>
+
+        <div class="finalizar-item">
+            <div class="finalizar-titulo">
+                <span><i class="fa-solid fa-cart-shopping"></i></span>
+                <h5>Resumo do pedido</h5>
+            </div>
+            <hr>
+            <div class="finalizar-conteudo"></div>
+        </div>
+    </section>
+</main>
+
+<!-- Carrinho -->
+<%- include('./partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('./partials/footer') %>

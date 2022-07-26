@@ -1,0 +1,68 @@
+<!-- Header -->
+<%- include('./partials/header') %>
+
+    <!-- Conteudo -->
+<main class="container compra-container">
+    <section class="finalizar-compra">
+
+        <div class="finalizar-item">
+            <div class="finalizar-titulo">
+                <span><i class="fa-solid fa-map-location-dot"></i></span>
+                <h5>Endereço de entrega</h5>
+            </div>
+            <hr>
+            <div class="finalizar-conteudo">
+                <form>
+                    <div>
+                        <label>CEP:</label>
+                        <input type="text" name="cep" id="cep" />
+                    </div>
+                    <div>
+                        <label>Endereço:</label>
+                        <input type="text" name="logradouro" id="endereco" />
+                    </div>
+                    <div class="finalizar-subconteudo">
+                        <section>
+                            <label>Número:</label>
+                            <input type="text" name="numero" />
+                        </section>
+                        <section>
+                            <label>Complemento:</label>
+                            <input type="text" name="complemento" />
+                        </section>
+                    </div>
+                    <div>
+                        <label>Bairro:</label>
+                        <input type="text" name="bairro" id="bairro" />
+                    </div>
+                    <div class="finalizar-subconteudo">
+                        <section>
+                            <label>Cidade:</label>
+                            <input type="text" name="cidade" id="cidade" />
+                        </section>
+                        <section>
+                            <label>Estado:</label>
+                            <input type="text" name="estado" id="estado" />
+                        </section>
+                    </div>
+                    <button class="btn"><a href="#">Finalizar Compra</a></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="finalizar-item">
+            <div class="finalizar-titulo">
+                <span><i class="fa-solid fa-cart-shopping"></i></span>
+                <h5>Resumo do pedido</h5>
+            </div>
+            <hr>
+            <div class="finalizar-conteudo"></div>
+        </div>
+    </section>
+</main>
+
+<!-- Carrinho -->
+<%- include('./partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('./partials/footer') %>

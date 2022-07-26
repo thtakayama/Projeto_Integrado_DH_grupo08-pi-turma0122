@@ -592,7 +592,7 @@ h2.preco {
 
 .finalizar-compra {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 20px;
 }
 
@@ -668,8 +668,22 @@ h2.preco {
   outline: none;
 }
 
+.finalizar-conteudo form > button {
+  align-self: flex-end;
+  max-width: 200px;
+}
+
 .finalizar-conteudo button {
   margin-bottom: 1em;
+  max-width: 100%;
+}
+
+.finalizar-redes {
+  display: flex;
+}
+
+.finalizar-redes button + button {
+  margin-left: .5em;
 }
 
 button.btn-cadastrar {
@@ -710,6 +724,19 @@ button.btn-google {
 
 button.btn-google:hover a {
   color: #EA4335!important;
+}
+
+.finalizar-subconteudo {
+  display: flex!important;
+  flex-direction: row!important;
+}
+
+.finalizar-subconteudo section + section {
+  margin-left: 1em;
+}
+
+.finalizar-subconteudo input {
+  width: 100%;
 }
 
 /* PAINEL USUÁRIO */

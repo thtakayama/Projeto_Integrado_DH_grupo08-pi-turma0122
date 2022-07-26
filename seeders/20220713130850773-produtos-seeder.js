@@ -74,8 +74,7 @@ module.exports = {
                         titulo: "Essa gente",
                         preco: "27.80",
                         avaliacao: "8.6",
-                        descricao: "Há alguns pontos de contato entre Chico Buarque e o protagonista de Essa gente, seu primeiro livro após a consagração do prêmio Camões. O escritor Manuel Duarte tem esse sobrenome de perfil vocálico idêntico, e gosta de bater perna nos arredores do Leblon. Contudo, o leitor logo descobre que isso conduz a um dos muitos becos sem saída da trama.
-Autor de um romance histórico que se tornou best-seller nos anos 1990, Duarte passa por um deserto criativo e emocional, tendo por pano de fundo um Rio de Janeiro que sangra e estrebucha sob o flagelo de feridas sociais finalmente supuradas, ostensivas. Com estrutura de diário, a reflexão sobre a linguagem ― marca da ficção buarquiana ― parte agora do apontamento rápido, artimanha para auxiliar a memória quando for possível dar sentido ao tumulto do presente. Ao seu melhor estilo, Chico Buarque borra as fronteiras entre vida, imaginação, sonho e delírio, e constrói uma narrativa engenhosa, em cujas entrelinhas se descortinam as contradições de um país fraturado.",
+                        descricao: "Há alguns pontos de contato entre Chico Buarque e o protagonista de Essa gente, seu primeiro livro após a consagração do prêmio Camões. O escritor Manuel Duarte tem esse sobrenome de perfil vocálico idêntico, e gosta de bater perna nos arredores do Leblon. Contudo, o leitor logo descobre que isso conduz a um dos muitos becos sem saída da trama. Autor de um romance histórico que se tornou best-seller nos anos 1990, Duarte passa por um deserto criativo e emocional, tendo por pano de fundo um Rio de Janeiro que sangra e estrebucha sob o flagelo de feridas sociais finalmente supuradas, ostensivas. Com estrutura de diário, a reflexão sobre a linguagem ― marca da ficção buarquiana ― parte agora do apontamento rápido, artimanha para auxiliar a memória quando for possível dar sentido ao tumulto do presente. Ao seu melhor estilo, Chico Buarque borra as fronteiras entre vida, imaginação, sonho e delírio, e constrói uma narrativa engenhosa, em cujas entrelinhas se descortinam as contradições de um país fraturado.",
                         img: "upload_imagem_1657371462071.webp",
                         autores_id: "7",
                         tipo_id: "1",
@@ -141,8 +140,7 @@ Autor de um romance histórico que se tornou best-seller nos anos 1990, Duarte p
                         titulo: "Triste fim de Policarpo Quaresma",
                         preco: "29.31",
                         avaliacao: "7.3",
-                        descricao: "A coleção Leitura Literária traz ao leitor mais uma consagrada obra da Literatura Brasileira: Triste fim de Policarpo Quaresma, de Lima Barreto. Considerado um dos mais importantes romances brasileiros do século XX, a obra apresenta a história do sofrido nacionalista durante o início da República brasileira. A presente edição, organizada e comentada por Letícia Malard, facilita a leitura e contextualiza o leitor à época da República Velha brasileira.
-/Vidas Secas - Graciliano Ramos - Vidas secas pertence à segunda fase modernista da literatura brasileira, conhecida como “regionalista” ou “romance de 30”. Denuncia fortemente as mazelas do povo brasileiro, principalmente a situação de miséria do sertão nordestino. É o romance em que Graciliano alcança o máximo da expressão que vinha buscando em sua prosa: o que impulsiona os personagens é a seca, áspera e cruel, e paradoxalmente a ligação telúrica, afetiva, que expõe naqueles seres em retirada, à procura de meios de sobrevivência e um futuro.",
+                        descricao: "A coleção Leitura Literária traz ao leitor mais uma consagrada obra da Literatura Brasileira: Triste fim de Policarpo Quaresma, de Lima Barreto. Considerado um dos mais importantes romances brasileiros do século XX, a obra apresenta a história do sofrido nacionalista durante o início da República brasileira. A presente edição, organizada e comentada por Letícia Malard, facilita a leitura e contextualiza o leitor à época da República Velha brasileira. Vidas Secas - Graciliano Ramos - Vidas secas pertence à segunda fase modernista da literatura brasileira, conhecida como “regionalista” ou “romance de 30”. Denuncia fortemente as mazelas do povo brasileiro, principalmente a situação de miséria do sertão nordestino. É o romance em que Graciliano alcança o máximo da expressão que vinha buscando em sua prosa: o que impulsiona os personagens é a seca, áspera e cruel, e paradoxalmente a ligação telúrica, afetiva, que expõe naqueles seres em retirada, à procura de meios de sobrevivência e um futuro.",
                         img: "upload_imagem_1657371954554.webp",
                         autores_id: "14",
                         tipo_id: "1",
@@ -164,9 +162,7 @@ Autor de um romance histórico que se tornou best-seller nos anos 1990, Duarte p
                         titulo: "Um milhão de finais felizes",
                         preco: "39.42",
                         avaliacao: "8.3",
-                        descricao: "Jonas não sabe muito bem o que fazer da vida. Entre suas leituras e ideias para livros anotadas em um caderninho de bolso, ele precisa dar conta de seus turnos no Rocket Café e ainda lidar com o conservadorismo de seus pais. Sua mãe alimenta a esperança de que ele volte a frequentar a igreja, e seu pai não faz muito por ele além de trazer problemas.
-
-Mas é quando conhece Arthur, um belo garoto de barba ruiva, que Jonas passa a questionar por quanto tempo conseguirá viver sob as expectativas de seus pais, fingindo ser uma pessoa diferente de quem é de verdade. Buscando conforto em seus amigos (e na sua história sobre dois piratas bonitões que se parecem muito com ele e Arthur), Jonas entenderá o verdadeiro significado de família e amizade, e descobrirá o poder de uma boa história.",
+                        descricao: "Jonas não sabe muito bem o que fazer da vida. Entre suas leituras e ideias para livros anotadas em um caderninho de bolso, ele precisa dar conta de seus turnos no Rocket Café e ainda lidar com o conservadorismo de seus pais. Sua mãe alimenta a esperança de que ele volte a frequentar a igreja, e seu pai não faz muito por ele além de trazer problemas. Mas é quando conhece Arthur, um belo garoto de barba ruiva, que Jonas passa a questionar por quanto tempo conseguirá viver sob as expectativas de seus pais, fingindo ser uma pessoa diferente de quem é de verdade. Buscando conforto em seus amigos (e na sua história sobre dois piratas bonitões que se parecem muito com ele e Arthur), Jonas entenderá o verdadeiro significado de família e amizade, e descobrirá o poder de uma boa história.",
                         img: "upload_imagem_1657372106613.webp",
                         autores_id: "17",
                         tipo_id: "1",
@@ -199,9 +195,7 @@ Mas é quando conhece Arthur, um belo garoto de barba ruiva, que Jonas passa a q
                         titulo: "Drácula",
                         preco: "33.20",
                         avaliacao: "9",
-                        descricao: "Drácula é um clássico da literatura de terror e apresenta por meio de cartas, diários e notícias os ataques do vampiro Conde Drácula a moradores de Londres e da Transilvânia. O romance epistolar marcou o gênero e, mesmo não sendo a primeira obra a retratar esse mito literário, definiu o que conhecemos hoje como vampiro, influenciando a literatura, cinema e teatro.
-
-E não sobrou nenhum - Agatha Christie - Suspense - Uma ilha misteriosa, um poema infantil, dez soldadinhos de porcelana e muito suspense são os ingredientes com que Agatha Christie constrói seu romance mais importante. Na ilha do Soldado, antiga propriedade de um milionário norte-americano, dez pessoas sem nenhuma ligação aparente são confrontadas por uma voz misteriosa com fatos marcantes de seus passados.",
+                        descricao: "Drácula é um clássico da literatura de terror e apresenta por meio de cartas, diários e notícias os ataques do vampiro Conde Drácula a moradores de Londres e da Transilvânia. O romance epistolar marcou o gênero e, mesmo não sendo a primeira obra a retratar esse mito literário, definiu o que conhecemos hoje como vampiro, influenciando a literatura, cinema e teatro. E não sobrou nenhum - Agatha Christie - Suspense - Uma ilha misteriosa, um poema infantil, dez soldadinhos de porcelana e muito suspense são os ingredientes com que Agatha Christie constrói seu romance mais importante. Na ilha do Soldado, antiga propriedade de um milionário norte-americano, dez pessoas sem nenhuma ligação aparente são confrontadas por uma voz misteriosa com fatos marcantes de seus passados.",
                         img: "upload_imagem_1657372361777.webp",
                         autores_id: "20",
                         tipo_id: "3",
@@ -234,11 +228,7 @@ E não sobrou nenhum - Agatha Christie - Suspense - Uma ilha misteriosa, um poe
                         titulo: "O instituto",
                         preco: "26.70",
                         avaliacao: "6.8",
-                        descricao: "No meio da noite, em uma casa no subúrbio de Minneapolis, um grupo de invasores assassina os pais de Luke e sequestra silenciosamente o menino de doze anos. A operação leva menos de dois minutos.
-
-Quando Luke acorda, ele está no Instituto, em um quarto que parece muito o dele, exceto pelo fato de que não tem janela. E do lado de fora tem outras portas, e atrás delas, outras crianças com talentos especiais, que chegaram àquele lugar do mesmo jeito que Luke. O grupo formado por ele, Kalisha, Nick, George, Iris e o caçula, Avery Dixon, de apenas dez anos, está na Parte da Frente. Outros jovens, Luke descobre, foram levados para a Parte de Trás e nunca mais vistos.
-
-Nessa instituição sinistra, a equipe se dedica impiedosamente a extrair dessas crianças toda a força de seus poderes paranormais. Não existem escrúpulos. Conforme cada nova vítima vai desaparecendo para a Parte de Trás, Luke fica mais e mais desesperado para escapar e procurar ajuda. Mas até hoje ninguém nunca conseguiu fugir do Instituto.",
+                        descricao: "No meio da noite, em uma casa no subúrbio de Minneapolis, um grupo de invasores assassina os pais de Luke e sequestra silenciosamente o menino de doze anos. A operação leva menos de dois minutos. Quando Luke acorda, ele está no Instituto, em um quarto que parece muito o dele, exceto pelo fato de que não tem janela. E do lado de fora tem outras portas, e atrás delas, outras crianças com talentos especiais, que chegaram àquele lugar do mesmo jeito que Luke. O grupo formado por ele, Kalisha, Nick, George, Iris e o caçula, Avery Dixon, de apenas dez anos, está na Parte da Frente. Outros jovens, Luke descobre, foram levados para a Parte de Trás e nunca mais vistos.Nessa instituição sinistra, a equipe se dedica impiedosamente a extrair dessas crianças toda a força de seus poderes paranormais. Não existem escrúpulos. Conforme cada nova vítima vai desaparecendo para a Parte de Trás, Luke fica mais e mais desesperado para escapar e procurar ajuda. Mas até hoje ninguém nunca conseguiu fugir do Instituto.",
                         img: "upload_imagem_1657372510104.webp",
                         autores_id: "23",
                         tipo_id: "3",
@@ -282,8 +272,7 @@ Nessa instituição sinistra, a equipe se dedica impiedosamente a extrair dessas
                         titulo: "Mundo de Sofia",
                         preco: "51.20",
                         avaliacao: "7.7",
-                        descricao: "Às vésperas de seu aniversário de quinze anos, Sofia Amundsen começa a receber bilhetes e cartões-postais bastante estranhos. Os bilhetes são anônimos e perguntam a Sofia quem é ela e de onde vem o mundo. Os postais são enviados do Líbano, por um major desconhecido, para uma certa Hilde Møller Knag, garota a quem Sofia também não conhece. O mistério dos bilhetes e dos postais é o ponto de partida deste romance fascinante, que vem conquistando milhões de leitores em todos os países e já vendeu mais de 1 milhão de exemplares só no Brasil. De capítulo em capítulo, de “lição” em “lição”, o leitor é convidado a percorrer toda a história da filosofia ocidental, ao mesmo tempo que se vê envolvido por um thriller que toma um rumo surpreendente.
-",
+                        descricao: "Às vésperas de seu aniversário de quinze anos, Sofia Amundsen começa a receber bilhetes e cartões-postais bastante estranhos. Os bilhetes são anônimos e perguntam a Sofia quem é ela e de onde vem o mundo. Os postais são enviados do Líbano, por um major desconhecido, para uma certa Hilde Møller Knag, garota a quem Sofia também não conhece. O mistério dos bilhetes e dos postais é o ponto de partida deste romance fascinante, que vem conquistando milhões de leitores em todos os países e já vendeu mais de 1 milhão de exemplares só no Brasil. De capítulo em capítulo, de “lição” em “lição”, o leitor é convidado a percorrer toda a história da filosofia ocidental, ao mesmo tempo que se vê envolvido por um thriller que toma um rumo surpreendente.",
                         img: "upload_imagem_1657372753306.webp",
                         autores_id: "27",
                         tipo_id: "3",
@@ -343,7 +332,7 @@ Nessa instituição sinistra, a equipe se dedica impiedosamente a extrair dessas
                         autores_id: "32",
                         tipo_id: "2",
                         generos_id: "9",
-                },
+                }, 
                 {
                         id: "33",
                         titulo: "Série House of Night",
