@@ -9,22 +9,23 @@ module.exports = {
   },
 
   acaoLogin: async (req, res) => {
-    let { email, senha } = req.body;
+    const { email, senha } = req.body;
 
-    console.log(req.body);
+    const clienteEncontrado = await Cliente.findOne({
+      where: {email: email}
+    });
+    if(clienteEncontrado == null){
+      res.render('login', { error: ["Usuário ou senha inválidos"]});
+      return;
+    } 
+    if(!bcrypt.compareSync(senha, clienteEncontrado.senha)){
+      res.render('login', { error: ["Usuário ou senha inválidos"]});
+      return;
+    } 
 
-    const senhaValida = bcrypt.compareSync(senha, Cliente.senha);
+    req.session.cliente = clienteEncontrado;
 
-    const cliente = await Cliente.findAll({
-      where: {
-        email: email,
-        senha: senhaValida
-      }
-    })
-    
-    if(cliente == undefined){
-      return res.render('login', { error: "Login/Senha inválidos" })
-    }
+    res.redirect("/");
   },
 
   cadastrar: (req, res) => {
@@ -34,27 +35,16 @@ module.exports = {
   acaoCadastrar: async (req, res) => {
 
       let errors = validationResult(req)
-      let emailCadastrado = await Cliente.findAll({
-        where: {
-          email: req.body.email
-        }
-      });
-
-      if(emailCadastrado[0] != undefined) {
-        return res.render("cadastro", { old: req.body, errors: {
-          email: {msg: "E-mail já cadastrado"}
-        }});
-      }
   
       if (errors.isEmpty()) {
         let { nome, email, senha, cpf} = req.body;
         const hash = bcrypt.hashSync(senha, 10)
         let cliente = await Cliente.create(
           { nome, email, senha: hash, cpf}
-        ).then(() => {
-          res.render("painel-usuario", {cliente})
-        }).catch(err => console.log(err))
-        req.session.cliente = cliente;
+        );
+
+          res.render("painel-usuario", {cliente});
+
       } else {
         res.render("cadastro", { errors: errors.mapped(), old: req.body });
       }
@@ -62,12 +52,9 @@ module.exports = {
     },
 
   painel: async (req, res) => {
-    // let cliente = await Cliente.findOne(
-      
-    // ).then(() => {
-    //   res.render("painel-usuario", {cliente})
-    // }).catch(err => console.log(err))
-    // req.session.cliente = cliente;
+      let clienteEncontrado = await Cliente.findByPk();
+
+      res.render("painel-usuario", {cliente: clienteEncontrado})
   }
 
 }

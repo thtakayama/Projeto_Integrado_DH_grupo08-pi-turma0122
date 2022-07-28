@@ -9,6 +9,26 @@ module.exports = {
     res.render('adm/login')
   },
 
+  acaoLoginAdm: async (req, res) => {
+    const { email, senha } = req.body;
+
+    const admEncontrado = await db.Usuario.findOne({
+      where: {email: email}
+    });
+    if(admEncontrado == null){
+      res.render('adm/login', { error: ["Usuário ou senha inválidos"]});
+      return;
+    } 
+    if(!bcrypt.compareSync(senha, admEncontrado.senha)){
+      res.render('adm/login', { error: ["Usuário ou senha inválidos"]});
+      return;
+    } 
+
+    req.session.adm = admEncontrado;
+
+    res.redirect("adm/produtos");
+  },
+
   produtos: (req,res) => {
     db.Produto.findAll({
       include: [

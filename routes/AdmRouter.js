@@ -6,6 +6,7 @@ var AdmController = require('../controllers/AdmController');
 const upload = require('../middlewares/multerMiddleware');
 
 router.get('/login', AdmController.login);
+router.post('/login', AdmController.acaoLoginAdm);
 //Lista produtos
 router.get('/produtos', AdmController.produtos);
 //Criar/Cadastrar produto

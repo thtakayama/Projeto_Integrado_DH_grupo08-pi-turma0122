@@ -10,10 +10,17 @@
           <img class="login-logo" src="/img/logos/logoPreto_editoraSabia.svg">
           <h3>Área administrativa</h3>
           <form action="" method="POST">
+            <% if(typeof(error) != "undefined"){ %>
+                <div class="danger">
+                <% for(let i = 0; i < error.length; i++) { %>
+                    <%= error[i]%>
+                <% } %>
+                </div>
+            <% } %>
               <label>E-mail:</label>
-              <input name="nome" id="nome">
+              <input type="email" name="email" id="email">
               <label>Senha:</label>
-              <input name="senha" id="senha">
+              <input type="password" name="senha" id="senha">
               <button class="btn"><a>Acessar</a></button>
           </form>
       </div>

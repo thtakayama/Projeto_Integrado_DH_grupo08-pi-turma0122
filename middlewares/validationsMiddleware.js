@@ -18,6 +18,11 @@ module.exports = [
         };
     }),
     check('email')
+        .custom(async email => {
+        const cliente = await Cliente.findAll({where: {email: email}});
+        if(cliente.length > 0){
+        throw new Error('O e-mail informado já está cadastrado');
+        }}).bail()
         .notEmpty().withMessage('Preencher o campo e-mail').bail()
         .trim().bail()
         .normalizeEmail().bail()

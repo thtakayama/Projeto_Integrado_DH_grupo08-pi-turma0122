@@ -10,6 +10,13 @@
           <img class="login-logo" src="/img/logos/logoPreto_editoraSabia.svg">
           <h3>Bem vindo a Editora Sabiá!</h3>
           <form action="/usuario/login" method="POST">
+            <% if(typeof(error) != "undefined"){ %>
+                <div class="danger">
+                <% for(let i = 0; i < error.length; i++) { %>
+                    <%= error[i]%>
+                <% } %>
+                </div>
+            <% } %>
               <label>E-mail:</label>
               <input type="email" name="email" id="email">
               <label>Senha:</label>
