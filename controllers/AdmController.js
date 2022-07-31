@@ -13,11 +13,13 @@ module.exports = {
     db.Produto.findAll({
       include: [
         {association: 'autores'},
-        {association: 'tipo'}
+        {association: 'tipo'},
+        {association: 'generos'}
       ]
     })
     .then(function(produtosRetornados) {
-      return res.render('adm/produtos', { produtos: produtosRetornados })
+      console.log(produtosRetornados);
+      return res.render('adm/produtos', { produtos: produtosRetornados });
     })
     .catch((erro) => console.log(erro))
   },
@@ -38,8 +40,12 @@ module.exports = {
       descricao: req.body.descricao,
       avaliacao: req.body.avaliacao,
       tipo_id: req.body.tipo,
-      generos_id: req.body.generos
-    }).then(() => {
+      generos: req.body.generos
+    })
+    .then((retornaProduto) => {
+      retornaProduto.addGenero(generos);
+    })
+    .then(() => {
       res.redirect('/adm/produtos');
     })
       .catch((error) => console.log(error));

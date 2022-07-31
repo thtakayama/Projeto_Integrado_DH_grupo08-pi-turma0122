@@ -8,11 +8,36 @@ const db = require('../database/models');
 module.exports = {
 
   home: (req, res) => {
-    res.render('home');
+    db.Produto.findAll({
+      order: [
+        ['id', 'DESC']
+      ],
+      limit: 4
+    })
+      .then((produtosRetornados) => {
+        return res.render('home', {produtos: produtosRetornados})
+      })
+      .catch((error) => console.log(error));
   },
 
   produtos: (req, res) => {
     res.render('produtos');
+  },
+
+  homeLancamentos: (req, res) => {
+    db.Produto.findAll({
+      where: {
+        tipo_id: 3
+      },
+      order: [
+        ['id', 'DESC']
+      ],
+      limit: 4
+    })
+      .then((produtosRetornados) => {
+        return res.render('home', {produtos: produtosRetornados})
+      })
+      .catch((error) => console.log(error));
   },
 
   lancamentos: (req, res) => {
@@ -23,7 +48,7 @@ module.exports = {
       limit: 12
     })
       .then((produtosRetornados) => {
-        return res.render('livros', {produtos: produtosRetornados})
+        return res.render('lancamentos', {produtos: produtosRetornados})
       })
       .catch((error) => console.log(error));
   },
@@ -67,7 +92,8 @@ module.exports = {
   produtoDetalhe: (req, res) => {
     db.Produto.findByPk(req.params.id, {
       include: [
-        {association: 'autores'}
+        {association: 'autores'},
+        {association: 'tipo'}
       ]
     })
       .then((produtoDetalhe) => {
@@ -77,11 +103,12 @@ module.exports = {
   },
 
   acaoComprar: (req,res) => {
-    db.Produto.findByPk(req.params.id)
-      .then((produtoRetornado) => {
-        return res.render('partials/carrinho', {produto: produtoRetornado})
+    db.Produto.create({
+      titulo: req.body.titulo
+    }).then(() => {
+      res.redirect('/adm/produtos');
     })
-    .cath((error) => console.log(error));
+      .catch((error) => console.log(error));
   },
 
   finalizarCompra: (req, res) => {
@@ -94,6 +121,10 @@ module.exports = {
 
   finalizarCompraEndereco: (req, res) => {
     res.render('finalizacao-compra-endereco');
+  },
+
+  finalizarCompraPagamento: (req, res) => {
+    res.render('finalizacao-compra-pagamento');
   },
 
   produtoInterno: (req, res) => {

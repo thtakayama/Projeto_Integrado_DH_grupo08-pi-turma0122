@@ -419,6 +419,10 @@ h2.preco {
   margin-bottom: 2.5em;
 }
 
+form.produto-comprar {
+  height: auto;
+}
+
 .produto-comprar ul {
   display: flex;
   list-style: none;
@@ -617,7 +621,7 @@ h2.preco {
   border-radius: 50%;
 }
 
-.fa-cart-shopping::before, .fa-user::before, .fa-map-location-dot::before {
+.fa-cart-shopping::before, .fa-user::before, .fa-map-location-dot::before, .fa-money-bill-wave::before {
   color: #1572a1;
 }
 
