@@ -15,9 +15,9 @@
             <h2><%= produto.titulo %></h2>
             <h6><%= produto.autores.nome %></h6>
             <h6><%= produto.tipo.nome %></h6>
-            <h2 class="preco">R$ <%= produto.preco %></h2>
-            <form class="produto-comprar" method="POST" action="/carrinho/acaoComprar">
-                <button><a>Comprar</a></button>
+            <h2 class="preco">R$ <%= produto.preco.replace('.', ',') %></h2>
+            <form class="produto-comprar">
+                <button><a href="/carrinho/<%= produto.id %>">Comprar</a></button>
             </form>
         </div>
     </section>

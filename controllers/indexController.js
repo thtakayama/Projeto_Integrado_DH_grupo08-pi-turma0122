@@ -102,17 +102,16 @@ module.exports = {
       .catch((error) => console.log(error));
   },
 
-  acaoComprar: (req,res) => {
-    db.Produto.create({
-      titulo: req.body.titulo
-    }).then(() => {
-      res.redirect('/adm/produtos');
+  comprar: (req,res) => {
+    db.Produtos.findAll( {
+      include: [
+        {association: 'autores'}
+      ]
     })
+      .then((produtoDetalhe) => {
+        return res.render('finalizacao-compra-login', {produto: produtoDetalhe})
+      })
       .catch((error) => console.log(error));
-  },
-
-  finalizarCompra: (req, res) => {
-    res.render('finalizacao-compra');
   },
 
   finalizarCompraLogin: (req, res) => {

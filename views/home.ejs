@@ -33,7 +33,7 @@
             <div class="livros-item">
                 <img src="/uploads/<%= produto.img %>">
                 <h4><%= produto.titulo %></h4>
-                <h4 class="preco">R$ <%= produto.preco %></h4>
+                <h4 class="preco">R$ <%= produto.preco.replace('.', ',') %></h4>
                 <button><a href="/produtos/<%= produto.id %>">Comprar</a></button>
             </div>
             <% } %>
