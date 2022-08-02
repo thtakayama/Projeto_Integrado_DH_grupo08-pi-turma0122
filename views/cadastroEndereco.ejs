@@ -1,0 +1,43 @@
+<!-- Header -->
+<%- include('./partials/header') %>
+
+<!-- Conteúdo -->
+<section class="container painel-produtos">
+    <h1>Painel Administrativo</h1>
+    <h2>Produtos - Cadastrar</h2>
+
+    <form method="POST" action="/usuario/endereco/cadastrar" enctype="multipart/form-data">
+        <div>
+            <label>Logradouro:</label>
+            <input type="text" name="logradouro">
+        </div>
+        <div>
+            <label>Complemento:</label>
+            <input type="text" name="complemento">
+        </div>
+        <div>
+            <label>Bairro:</label>
+            <input type="text" name="cep">
+        </div>
+        <div>
+            <label>Cidade:</label>
+            <input type="text" name="bairro">
+        </div>
+        <div>
+            <label>Estado:</label>
+            <input type="text" name="cidade">
+        </div>
+        <div>
+            <label>CEP:</label>
+            <input type="text" name="estado">
+        </div>
+        
+        <button>Editar</button>
+    </form>
+</section>
+
+<!-- Carrinho -->
+<%- include('./partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('./partials/footer') %>

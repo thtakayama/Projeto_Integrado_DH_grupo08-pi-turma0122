@@ -13,18 +13,21 @@ module.exports = {
     const { email, senha } = req.body;
 
     const admEncontrado = await db.Usuario.findOne({
-      where: {email: email}
+      where: {
+        email: email,
+        senha: senha
+      }
     });
     if(admEncontrado == null){
       res.render('adm/login', { error: ["Usuário ou senha inválidos"]});
       return;
     } 
-    if(!bcrypt.compareSync(senha, admEncontrado.senha)){
-      res.render('adm/login', { error: ["Usuário ou senha inválidos"]});
-      return;
-    } 
+    // if(!bcrypt.compareSync(senha, admEncontrado.senha)){
+    //   res.render('adm/login', { error: ["Usuário ou senha inválidos"]});
+    //   return;
+    // } 
 
-    req.session.adm = admEncontrado;
+    req.session.usuario = admEncontrado;
 
     res.redirect("adm/produtos");
   },

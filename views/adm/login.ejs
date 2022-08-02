@@ -1,33 +1,33 @@
 <!-- Header -->
 <%- include('../partials/header') %>
 
-<!-- Conteúdo -->
-   <!-- Conteudo Login-->
-   <main class="login container">
-      <div class="admin-img">
-      </div>
-      <div class="login-info">
-          <img class="login-logo" src="/img/logos/logoPreto_editoraSabia.svg">
-          <h3>Área administrativa</h3>
-          <form action="" method="POST">
-            <% if(typeof(error) != "undefined"){ %>
-                <div class="danger">
-                <% for(let i = 0; i < error.length; i++) { %>
-                    <%= error[i]%>
-                <% } %>
-                </div>
-            <% } %>
-              <label>E-mail:</label>
-              <input type="email" name="email" id="email">
-              <label>Senha:</label>
-              <input type="password" name="senha" id="senha">
-              <button class="btn"><a>Acessar</a></button>
-          </form>
-      </div>
-  </main>
+    <!-- Conteúdo -->
+    <!-- Conteudo Login-->
+    <main class="login container">
+        <div class="admin-img">
+        </div>
+        <div class="login-info">
+            <img class="login-logo" src="/img/logos/logoPreto_editoraSabia.svg">
+            <h3>Área administrativa</h3>
+            <form action="/adm/login" method="POST">
+                <% if(typeof(error) !="undefined" ){ %>
+                    <div class="danger">
+                        <% for(let i=0; i < error.length; i++) { %>
+                            <%= error[i]%>
+                                <% } %>
+                    </div>
+                    <% } %>
+                        <label>E-mail:</label>
+                        <input type="email" name="email" id="email">
+                        <label>Senha:</label>
+                        <input type="password" name="senha" id="senha">
+                        <button class="btn"><a>Acessar</a></button>
+            </form>
+        </div>
+    </main>
 
-<!-- Carrinho -->
-<%- include('../partials/carrinho') %>
+    <!-- Carrinho -->
+    <%- include('../partials/carrinho') %>
 
-<!-- Footer -->
-<%- include('../partials/footer') %>
+        <!-- Footer -->
+        <%- include('../partials/footer') %>

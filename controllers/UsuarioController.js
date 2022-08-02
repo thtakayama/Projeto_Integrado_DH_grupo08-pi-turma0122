@@ -52,9 +52,18 @@ module.exports = {
     },
 
   painel: async (req, res) => {
-      let clienteEncontrado = await Cliente.findByPk();
+      let cliente = await Cliente.findAll();
+      console.log(cliente)
 
-      res.render("painel-usuario", {cliente: clienteEncontrado})
+      res.render("painel-usuario", {cliente})
+  },
+
+  enderecoEditar: (req, res) => {
+
+  },
+
+  acaoEditarEndereco: (req, res) => {
+
   }
 
 }
