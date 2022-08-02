@@ -7,37 +7,51 @@ const db = require('../database/models');
 
 module.exports = {
 
-  home: (req, res) => {
-    db.Produto.findAll({
-      order: [
-        ['id', 'DESC']
-      ],
-      limit: 4
-    })
-      .then((produtosRetornados) => {
-        return res.render('home', {produtos: produtosRetornados})
-      })
-      .catch((error) => console.log(error));
-  },
-
-  produtos: (req, res) => {
-    res.render('produtos');
-  },
-
-  homeLancamentos: (req, res) => {
-    db.Produto.findAll({
+  home: async (req, res) => {
+    let produtosRetornados = await db.Produto.findAll({
       where: {
         tipo_id: 3
       },
       order: [
         ['id', 'DESC']
       ],
-      limit: 4
-    })
-      .then((produtosRetornados) => {
-        return res.render('home', {produtos: produtosRetornados})
-      })
-      .catch((error) => console.log(error));
+      limit: 8
+    });
+    let seriesRetornadas = await db.Produto.findAll({
+      where: {
+        tipo_id: 2
+      },
+      order: [
+        ['id', 'DESC']
+      ],
+      limit: 2
+    });
+    let destaqueRetornado = await db.Produto.findOne({
+      where: {
+        tipo_id: 2
+      },
+      order: [
+        ['avaliacao', 'DESC']
+      ]
+    });
+    return res.render('home', {produtos: produtosRetornados, series: seriesRetornadas, destaque: destaqueRetornado})
+  },
+
+  produtos: (req, res) => {
+    res.render('produtos');
+  },
+
+  homeLancamentos: async (req, res) => {
+    let produtosRetornados = await db.Produto.findAll({
+      where: {
+        tipo_id: 2
+      },
+      order: [
+        ['id', 'DESC']
+      ],
+      limit: 8
+    });
+    return res.render('home', {produtos: produtosRetornados})
   },
 
   lancamentos: (req, res) => {
