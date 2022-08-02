@@ -35,10 +35,6 @@ module.exports = (sequelize, DataTypes) => {
             tipo_id: {
                 type: DataTypes.INTEGER,
                 allowNull: false
-            },
-            generos_id: {
-                type: DataTypes.INTEGER,
-                allowNull: false
             }
         },
         {
@@ -60,12 +56,17 @@ module.exports = (sequelize, DataTypes) => {
         ),
         produto.belongsToMany(modelos.Genero, {
             as: "generos",
-            through: "genero_has_produto",
+            through: "generos_has_produtos",
             foreignKey: "produtos_id",
-            otherKey: "generos_id",
-            timestamps: false
+            otherKey: "generos_id"
         }
         );    
+        produto.belongsToMany(modelos.Pedido, {
+            as: "pedidos",
+            through: "pedidos_has_produtos",
+            foreignKey: "pedidos_id"
+        }
+        );  
     }
 
     return produto;

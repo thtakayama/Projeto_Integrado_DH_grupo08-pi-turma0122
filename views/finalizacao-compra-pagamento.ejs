@@ -1,0 +1,49 @@
+<!-- Header -->
+<%- include('./partials/header') %>
+
+    <!-- Conteudo -->
+<main class="container compra-container">
+    <section class="finalizar-compra">
+
+        <div class="finalizar-item">
+            <div class="finalizar-titulo">
+                <span><i class="fa-solid fa-money-bill-wave"></i></span>
+                <h5>Forma de Pagamento</h5>
+            </div>
+            <hr>
+            <div class="finalizar-conteudo">
+                <form>
+                    <div>
+                        <label>Forma de pagamento:</label>
+                        <select type="text" name="pagamento">
+                                <option value="cartão de crédito">
+                                    Cartão de crédito
+                                </option>
+                                <option value="Boleto">
+                                    Boleto
+                                </option>
+                        </select>
+                    </div>
+                    <div class="pagamento-conteudo">
+                    </div>
+                    <button class="btn"><a href="#">Finalizar Compra</a></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="finalizar-item">
+            <div class="finalizar-titulo">
+                <span><i class="fa-solid fa-cart-shopping"></i></span>
+                <h5>Resumo do pedido</h5>
+            </div>
+            <hr>
+            <div class="finalizar-conteudo"></div>
+        </div>
+    </section>
+</main>
+
+<!-- Carrinho -->
+<%- include('./partials/carrinho') %>
+
+<!-- Footer -->
+<%- include('./partials/footer') %>

@@ -7,12 +7,51 @@ const db = require('../database/models');
 
 module.exports = {
 
-  home: (req, res) => {
-    res.render('home');
+  home: async (req, res) => {
+    let produtosRetornados = await db.Produto.findAll({
+      where: {
+        tipo_id: 3
+      },
+      order: [
+        ['id', 'DESC']
+      ],
+      limit: 8
+    });
+    let seriesRetornadas = await db.Produto.findAll({
+      where: {
+        tipo_id: 2
+      },
+      order: [
+        ['id', 'DESC']
+      ],
+      limit: 2
+    });
+    let destaqueRetornado = await db.Produto.findOne({
+      where: {
+        tipo_id: 2
+      },
+      order: [
+        ['avaliacao', 'DESC']
+      ]
+    });
+    return res.render('home', {produtos: produtosRetornados, series: seriesRetornadas, destaque: destaqueRetornado})
   },
 
   produtos: (req, res) => {
     res.render('produtos');
+  },
+
+  homeLancamentos: async (req, res) => {
+    let produtosRetornados = await db.Produto.findAll({
+      where: {
+        tipo_id: 2
+      },
+      order: [
+        ['id', 'DESC']
+      ],
+      limit: 8
+    });
+    return res.render('home', {produtos: produtosRetornados})
   },
 
   lancamentos: (req, res) => {
@@ -23,7 +62,7 @@ module.exports = {
       limit: 12
     })
       .then((produtosRetornados) => {
-        return res.render('livros', {produtos: produtosRetornados})
+        return res.render('lancamentos', {produtos: produtosRetornados})
       })
       .catch((error) => console.log(error));
   },
@@ -67,7 +106,8 @@ module.exports = {
   produtoDetalhe: (req, res) => {
     db.Produto.findByPk(req.params.id, {
       include: [
-        {association: 'autores'}
+        {association: 'autores'},
+        {association: 'tipo'}
       ]
     })
       .then((produtoDetalhe) => {
@@ -76,16 +116,16 @@ module.exports = {
       .catch((error) => console.log(error));
   },
 
-  acaoComprar: (req,res) => {
-    db.Produto.findByPk(req.params.id)
-      .then((produtoRetornado) => {
-        return res.render('partials/carrinho', {produto: produtoRetornado})
+  comprar: (req,res) => {
+    db.Produtos.findAll( {
+      include: [
+        {association: 'autores'}
+      ]
     })
-    .cath((error) => console.log(error));
-  },
-
-  finalizarCompra: (req, res) => {
-    res.render('finalizacao-compra');
+      .then((produtoDetalhe) => {
+        return res.render('finalizacao-compra-login', {produto: produtoDetalhe})
+      })
+      .catch((error) => console.log(error));
   },
 
   finalizarCompraLogin: (req, res) => {
@@ -94,6 +134,10 @@ module.exports = {
 
   finalizarCompraEndereco: (req, res) => {
     res.render('finalizacao-compra-endereco');
+  },
+
+  finalizarCompraPagamento: (req, res) => {
+    res.render('finalizacao-compra-pagamento');
   },
 
   produtoInterno: (req, res) => {

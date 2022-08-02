@@ -29,30 +29,14 @@
       <section class="recomendacoes container">
         <h3 class="titulo">Últimos lançamentos</h3>
         <div class="livros">
+          <% for(produto of produtos) { %>
             <div class="livros-item">
-                <img src="/img/brasileira/essa-gente.webp">
-                <h4>Título livro</h4>
-                <h4 class="preco">R$ 24,90</h4>
-                <button><a>Comprar</a></button>
+                <img src="/uploads/<%= produto.img %>">
+                <h4><%= produto.titulo %></h4>
+                <h4 class="preco">R$ <%= produto.preco.replace('.', ',') %></h4>
+                <button><a href="/produtos/<%= produto.id %>">Comprar</a></button>
             </div>
-            <div class="livros-item">
-                <img src="/img/estrangeira/e-nao-sobrou-nenhum.webp">
-                <h4>Título livro</h4>
-                <h4 class="preco">R$ 24,90</h4>
-                <button><a>Comprar</a></button>
-            </div>
-            <div class="livros-item">
-                <img src="/img/estrangeira/o-medico-e-o-monstro.webp">
-                <h4>Título livro</h4>
-                <h4 class="preco">R$ 24,90</h4>
-                <button><a>Comprar</a></button>
-            </div>
-            <div class="livros-item">
-                <img src="/img/brasileira/triste-fim-de-policarpo-quaresma.webp">
-                <h4>Título livro</h4>
-                <h4 class="preco">R$ 24,90</h4>
-                <button><a>Comprar</a></button>
-            </div>
+            <% } %>
         </div>
     </section>
     </main>
@@ -60,20 +44,16 @@
     <section class="recomendacoes container">
       <h3 class="titulo">Séries em destaque do mês</h3>
       <div class="series">
+        <% for(serie of series) { %>
           <div class="livros-item">
-              <img src="/img/series/box-george-orwell.png">
-              <h4>Título livro</h4>
-              <h4 class="preco">R$ 24,90</h4>
-              <button><a>Comprar</a></button>
+              <img src="/uploads/<%= serie.img %>">
+              <h4><%= serie.titulo %></h4>
+              <h4 class="preco">R$ <%= serie.preco.replace('.', ',') %></h4>
+              <button><a href="/produtos/<%= serie.id %>">Comprar</a></button>
           </div>
-          <div class="livros-item">
-              <img src="/img/series/box-obras-de-mario-andrade.png">
-              <h4>Título livro</h4>
-              <h4 class="preco">R$ 24,90</h4>
-              <button><a>Comprar</a></button>
-          </div>
+          <% } %>
           <div class="series-img">
-              <img src="/img/series/box-virginia-wolf.png">
+              <img src="/uploads/<%= destaque.img %>">
           </div>
       </div>
   </section>

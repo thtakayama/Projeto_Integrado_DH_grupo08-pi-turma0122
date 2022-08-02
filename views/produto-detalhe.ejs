@@ -14,15 +14,11 @@
         <div class="produto-info">
             <h2><%= produto.titulo %></h2>
             <h6><%= produto.autores.nome %></h6>
-            <h2 class="preco">R$ <%= produto.preco %></h2>
-            <div class="produto-comprar">
-                <ul>
-                    <li><a>-</a></li>
-                    <li><a>1</a></li>
-                    <li><a>+</a></li>
-                </ul>
+            <h6><%= produto.tipo.nome %></h6>
+            <h2 class="preco">R$ <%= produto.preco.replace('.', ',') %></h2>
+            <form class="produto-comprar">
                 <button><a href="/carrinho/<%= produto.id %>">Comprar</a></button>
-            </div>
+            </form>
         </div>
     </section>
 

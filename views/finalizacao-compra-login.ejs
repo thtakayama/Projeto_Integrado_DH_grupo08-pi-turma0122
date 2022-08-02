@@ -20,7 +20,7 @@
                         <label>Senha:</label>
                         <input type="password" />
                     </div>
-                    <button class="btn"><a href="#">Acessar</a></button>
+                    <button class="btn"><a href="/finalizar-compra/endereco">Próximo</a></button>
                 </form>
                 <div class="finalizar-redes">
                     <button class="btn btn-facebook">
@@ -36,7 +36,7 @@
                         </a>
                     </button>
                 </div>
-                <button class="btn btn-cadastrar"><a href="#">Cadastrar</a></button>
+                <button class="btn btn-cadastrar"><a href="/usuario/cadastro">Cadastrar</a></button>
             </div>
         </div>
 
@@ -46,7 +46,27 @@
                 <h5>Resumo do pedido</h5>
             </div>
             <hr>
-            <div class="finalizar-conteudo"></div>
+            <div class="finalizar-conteudo">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="carrinho-item">
+                      <div class="carrinho-info">
+                        <img src="">
+                        <div>
+                          <h5><%= produto.titulo %></h5>
+                          <h5>R$</h5>
+                          <div class="produto-comprar">
+                            <ul>
+                              <li><a>-</a></li>
+                              <li><a>1</a></li>
+                              <li><a>+</a></li>
+                            </ul>
+                            <a>Excluir</a>
+                          </div>
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+            </div>
         </div>
     </section>
 </main>
