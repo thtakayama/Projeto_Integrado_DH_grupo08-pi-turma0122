@@ -72,7 +72,17 @@ button.btn {
   transition: 0.3s;
 }
 
-button.btn:hover {
+a.btn {
+  background-color: #1572a1;
+  border: 3px solid #1572a1;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  transition: 0.3s;
+  color: white;
+  font-weight: 700;
+}
+
+button.btn:hover, a.btn:hover {
   background-color: white;
 }
 
@@ -81,7 +91,7 @@ button.btn a {
   font-weight: 700;
 }
 
-button.btn:hover a {
+button.btn:hover a, a.btn:hover {
   color: #1572a1 !important;
 }
 
