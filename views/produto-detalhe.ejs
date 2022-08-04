@@ -12,13 +12,10 @@
         </div>
         <!--Informações produto-->
         <div class="produto-info">
-            <h2><%= produto.titulo %></h2>
+            <h2 id="produto-titulo"><%= produto.titulo %></h2>
             <h6><%= produto.autores.nome %></h6>
-            <h6><%= produto.tipo.nome %></h6>
-            <h2 class="preco">R$ <%= produto.preco.replace('.', ',') %></h2>
-            <form class="produto-comprar">
-                <button><a href="/carrinho/<%= produto.id %>">Comprar</a></button>
-            </form>
+            <h2 id="produto-preco" class="preco">R$ <%= produto.preco.replace('.', ',') %></h2>
+              <a id="btn-comprar" class="btn">Comprar</a>
         </div>
     </section>
 
@@ -51,32 +48,16 @@
 
     <!--recomendações-->
     <section class="recomendacoes container">
-        <h3 class="titulo">Você também pode gostar:</h3>
+        <h3 class="titulo">Últimos lançamentos:</h3>
         <div class="livros">
-            <div class="livros-item">
-                <img src="/img/brasileira/essa-gente.webp">
-                <h4>Título livro</h4>
-                <h4 class="preco">R$ 24,90</h4>
-                <button><a>Comprar</a></button>
-            </div>
-            <div class="livros-item">
-                <img src="/img/estrangeira/e-nao-sobrou-nenhum.webp">
-                <h4>Título livro</h4>
-                <h4 class="preco">R$ 24,90</h4>
-                <button><a>Comprar</a></button>
-            </div>
-            <div class="livros-item">
-                <img src="/img/estrangeira/o-medico-e-o-monstro.webp">
-                <h4>Título livro</h4>
-                <h4 class="preco">R$ 24,90</h4>
-                <button><a>Comprar</a></button>
-            </div>
-            <div class="livros-item">
-                <img src="/img/brasileira/triste-fim-de-policarpo-quaresma.webp">
-                <h4>Título livro</h4>
-                <h4 class="preco">R$ 24,90</h4>
-                <button><a>Comprar</a></button>
-            </div>
+            <% for(lancamento of lancamentos) { %>
+                <div class="livros-item">
+                    <img src="/uploads/<%= lancamento.img %>">
+                    <h4><%= lancamento.titulo %></h4>
+                    <h4 class="preco">R$ <%= lancamento.preco.replace('.', ',') %></h4>
+                    <button><a href="/produtos/<%= lancamento.id %>">Comprar</a></button>
+                </div>
+                <% } %>
         </div>
     </section>
 

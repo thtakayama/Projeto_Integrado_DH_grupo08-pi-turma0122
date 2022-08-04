@@ -16,17 +16,16 @@
                     <div>
                         <label>Forma de pagamento:</label>
                         <select type="text" name="pagamento">
-                                <option value="cartão de crédito">
-                                    Cartão de crédito
+                            <% for(let i = 0; i < pagamentos.length; i++) { %>
+                                <option value="<%= pagamentos[i].id %>">
+                                    <%= pagamentos[i].tipo %>
                                 </option>
-                                <option value="Boleto">
-                                    Boleto
-                                </option>
+                            <% } %>
                         </select>
                     </div>
                     <div class="pagamento-conteudo">
                     </div>
-                    <button class="btn"><a href="#">Finalizar Compra</a></button>
+                    <button class="btn"><a href="/confirmacao-compra">Finalizar Compra</a></button>
                 </form>
             </div>
         </div>
@@ -37,7 +36,14 @@
                 <h5>Resumo do pedido</h5>
             </div>
             <hr>
-            <div class="finalizar-conteudo"></div>
+            <div class="finalizar-conteudo">
+                <div id="produtosCarrinho" class="carrinho-conteudo">
+                </div>
+                <div class="carrinho-total">
+                    <h4>Total:</h4>
+                    <h4 id="valor-total"></h4>
+                </div>
+            </div>
         </div>
     </section>
 </main>

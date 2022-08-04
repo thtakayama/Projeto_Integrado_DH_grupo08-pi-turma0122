@@ -62,11 +62,7 @@ module.exports = {
       preco: req.body.preco,
       descricao: req.body.descricao,
       avaliacao: req.body.avaliacao,
-      tipo_id: req.body.tipo,
-      generos: req.body.generos
-    })
-    .then((retornaProduto) => {
-      retornaProduto.addGenero(generos);
+      tipo_id: req.body.tipo
     })
     .then(() => {
       res.redirect('/adm/produtos');

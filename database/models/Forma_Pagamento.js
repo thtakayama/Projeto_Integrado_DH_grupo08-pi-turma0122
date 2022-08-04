@@ -19,6 +19,14 @@ module.exports = (sequelize, DataTypes) => {
         freezeTableName: true
       }
     ) 
+
+    forma_pagamento.associate = function (modelos) {
+      forma_pagamento.hasMany(modelos.Pedido, {
+          as: "pedidos",
+          foreignKey: "pedidos_id"
+      }
+      )
+    }
   
     return forma_pagamento
     

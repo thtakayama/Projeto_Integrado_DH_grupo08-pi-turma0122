@@ -21,6 +21,7 @@ router.get('/carrinho/:id', IndexController.comprar);
 router.get('/finalizar-compra/login', IndexController.finalizarCompraLogin);
 router.get('/finalizar-compra/endereco', validacoesEndereco, IndexController.finalizarCompraEndereco);
 router.get('/finalizar-compra/pagamento', IndexController.finalizarCompraPagamento);
+router.get('/confirmacao-compra', IndexController.finalizarCompra);
 router.get('/produtoInterno', IndexController.produtoInterno);
 
 module.exports = router;

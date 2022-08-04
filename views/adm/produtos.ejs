@@ -18,7 +18,6 @@
                 <th>Descrição</th>
                 <th>Avaliação</th>
                 <th>Tipo</th>
-                <th>Genêro</th>
                 <th>Ações</th>
             </tr>
         </thead>
@@ -32,7 +31,6 @@
                     <td><%= produto.descricao %></td>
                     <td><%= produto.avaliacao %></td>
                     <td><%= produto.tipo.nome %></td>
-                    <td><%= produto.generos.nome %></td>
                     <td class="acoes">
                         <form action="/adm/produtos/editar/<%= produto.id %>"><button class="btn-editar">Editar</button></form>
                         <form action="/adm/produtos/excluir/<%= produto.id %>" method="POST"><button class="btn-excluir">Excluir</button></form>

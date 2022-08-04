@@ -43,6 +43,12 @@ module.exports = (sequelize, DataTypes) => {
       }
       )
 
+      pedido.belongsTo(modelos.Forma_Pagamento, {
+        as: "pagamentos",
+        foreignKey: "formas_pagamento_id"
+    }
+    )
+
       pedido.belongsToMany(modelos.Produto, {
           as: "produtos",
           through: "pedido_has_produto",

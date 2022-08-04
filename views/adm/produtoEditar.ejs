@@ -43,16 +43,6 @@
                 <% } %>
             </select>
         </div>
-        <div>
-            <label>Genêro:</label>
-            <select type="text" name="generos">
-                <% for(let i = 0; i < generos.length; i++) { %>
-                    <option value="<%= generos[i].id %>">
-                        <%= generos[i].nome %>
-                    </option>
-                <% } %>
-            </select>
-        </div>
 
         <button>Salvar</button>
     </form>

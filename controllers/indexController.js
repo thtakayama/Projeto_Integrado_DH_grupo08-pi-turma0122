@@ -103,29 +103,28 @@ module.exports = {
       .catch((error) => console.log(error));
   },
 
-  produtoDetalhe: (req, res) => {
-    db.Produto.findByPk(req.params.id, {
+  produtoDetalhe: async (req, res) => {
+    let produtoDetalhe = await db.Produto.findByPk(req.params.id, {
       include: [
         {association: 'autores'},
         {association: 'tipo'}
       ]
-    })
-      .then((produtoDetalhe) => {
-        return res.render('produto-detalhe', {produto: produtoDetalhe})
-      })
-      .catch((error) => console.log(error));
+    });
+    let ultimosLancamentos = await db.Produto.findAll({
+      order: [
+        ['id', 'DESC']
+      ],
+      limit: 4
+    });
+    return res.render('produto-detalhe', {produto: produtoDetalhe, lancamentos: ultimosLancamentos})
   },
 
   comprar: (req,res) => {
-    db.Produtos.findAll( {
-      include: [
-        {association: 'autores'}
-      ]
-    })
-      .then((produtoDetalhe) => {
-        return res.render('finalizacao-compra-login', {produto: produtoDetalhe})
-      })
-      .catch((error) => console.log(error));
+    res.render('finalizacao-compra-login');
+  },
+
+  finalizarCompra: (req, res) => {
+    res.render('confirmacao-de-compra');
   },
 
   finalizarCompraLogin: (req, res) => {
@@ -136,8 +135,9 @@ module.exports = {
     res.render('finalizacao-compra-endereco');
   },
 
-  finalizarCompraPagamento: (req, res) => {
-    res.render('finalizacao-compra-pagamento');
+  finalizarCompraPagamento: async (req, res) => {
+    let pagamentosRetornados = await db.Forma_Pagamento.findAll();
+    res.render('finalizacao-compra-pagamento', {pagamentos: pagamentosRetornados});
   },
 
   produtoInterno: (req, res) => {

@@ -47,25 +47,12 @@
             </div>
             <hr>
             <div class="finalizar-conteudo">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="carrinho-item">
-                      <div class="carrinho-info">
-                        <img src="">
-                        <div>
-                          <h5><%= produto.titulo %></h5>
-                          <h5>R$</h5>
-                          <div class="produto-comprar">
-                            <ul>
-                              <li><a>-</a></li>
-                              <li><a>1</a></li>
-                              <li><a>+</a></li>
-                            </ul>
-                            <a>Excluir</a>
-                          </div>
-                        </div>
-                    </div>
-                  </li>
-                </ul>
+                <div id="produtosCarrinho" class="carrinho-conteudo">
+                </div>
+                <div class="carrinho-total">
+                    <h4>Total:</h4>
+                    <h4 id="valor-total"></h4>
+                </div>
             </div>
         </div>
     </section>
