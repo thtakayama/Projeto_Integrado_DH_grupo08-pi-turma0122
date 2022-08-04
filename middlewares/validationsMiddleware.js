@@ -1,6 +1,6 @@
 const path = require('path');
 const { check, validationResult, body } = require('express-validator');
-const { CPF } = require('cpf-cnpj-validator');
+const CPF = require('cpf');
 const { Cliente } = require('../database/models')
 
 module.exports = [
@@ -8,9 +8,10 @@ module.exports = [
         .notEmpty().withMessage('Preencher o campo nome').bail()
         .trim(),
     check('cpf')
-        // .custom(cpf => {
-        // return CPF.isValid(cpf);
-        // }).withMessage('O CPF informado é inválido').bail()
+        .isLength({min: 14}).withMessage('Digite o CPF no formato xxx.xxx.xxx-xx').bail()
+        .custom(cpf => {
+        return CPF.isValid(cpf);
+        }).withMessage('O CPF informado é inválido').bail()
         .custom(async cpf => {
         const cliente = await Cliente.findAll({where: {cpf: cpf}});
         if(cliente.length > 0){
